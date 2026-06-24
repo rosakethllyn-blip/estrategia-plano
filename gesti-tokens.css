@@ -1,0 +1,184 @@
+/* =====================================================================
+   Modo IA Saúde — Design System Tokens
+   Paleta: marca laranja/coral (pêssego→vermelho) + cinza neutro +
+   feedback (success/warning/danger) + acentos (purple/blue).
+   Tipografia: Funnel Display em toda a interface (Google Fonts).
+   Logo: arquivos SVG/PNG em public/logos.
+   Importe ANTES de gesti-components.css.
+   Tema: data-theme="light" (padrão) / "dark". Sem atributo, segue o sistema.
+   ===================================================================== */
+
+/* ---------- Funnel Display (títulos) — Google Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+/* ---------- Poppins (corpo / textos) — Google Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* ---------- Ramp: Brand (Primary — pêssego → vermelho/coral) ---------- */
+  --brand-50:  #FDEAE3; /* P96 */
+  --brand-100: #FBD9CE; /* P93 */
+  --brand-200: #F8B79F; /* P85 */
+  --brand-300: #F58E6B; /* P75 */
+  --brand-400: #FB6334; /* P62 */
+  --brand-500: #F23C00; /* P52 — marca */
+  --brand-600: #D6330A;
+  --brand-700: #B92A0A; /* P40 */
+  --brand-800: #8A1F07;
+
+  /* ---------- Ramp: Grey (neutro) ---------- */
+  --gray-50:  #F5F5F5; /* G97 */
+  --gray-100: #EFEFEF; /* G95 */
+  --gray-200: #E3E3E3; /* G91 */
+  --gray-300: #DADADA; /* G88 */
+  --gray-400: #B0B0B0;
+  --gray-500: #9B9B9B; /* G62 */
+  --gray-600: #6E6E6E; /* G44 */
+  --gray-700: #4A4A4A; /* G33 */
+  --gray-800: #2E2E2E;
+  --gray-900: #232323; /* G15 */
+
+  /* ---------- Feedback + acentos ---------- */
+  --success:      #1AAE3A;  --success-soft: #E3F9E5;
+  --warning:      #F5A800;  --warning-soft: #FCEFC7;
+  --danger:       #F02B2B;  --danger-soft:  #FDE8E8;
+  --purple:       #7C18E6;  --purple-soft:  #F1E3FF;
+  --blue:         #0E9CFF;  --blue-soft:    #DCEFFF;
+
+  /* =================================================================
+     TOKENS SEMÂNTICOS — LIGHT
+     ================================================================= */
+  --bg-canvas:        #FFFFFF;
+  --bg-surface:       #FFFFFF;
+  --bg-surface-alt:   #F5F5F5;
+  --bg-inverse:       #1A1A1B;
+
+  --bg-primary:       var(--brand-500);
+  --bg-primary-hover: var(--brand-600);
+  --bg-primary-soft:  var(--brand-50);
+
+  --text-primary:     #1A1A1B;
+  --text-secondary:   #6E6E6E;
+  --text-muted:       #9B9B9B;
+  --text-on-primary:  #FFFFFF;
+  --text-on-inverse:  #F5F5F5;
+  --text-link:        var(--brand-500);
+
+  --border-default:   #E3E3E3;
+  --border-strong:    #DADADA;
+  --divider:          #EFEFEF;
+
+  --ring-focus:       rgba(242, 60, 0, 0.28);
+  --overlay:          rgba(20, 20, 20, 0.5);
+
+  /* ---------- Tipografia ---------- */
+  --font-display: "Funnel Display", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --font-body:    "Poppins", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --font-logo:    "Funnel Display", "Poppins", sans-serif;
+  --font-mono:    "SF Mono", "JetBrains Mono", Consolas, monospace;
+
+  --fs-xs:   12px;
+  --fs-sm:   14px;
+  --fs-base: 16px;
+  --fs-lg:   20px;
+  --fs-xl:   26px;
+  --fs-2xl:  34px;
+  --fs-3xl:  44px;
+  --fs-4xl:  64px;
+
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 700;
+  --fw-bold:     700;
+  --fw-black:    900;
+
+  --lh-tight:   1.08;
+  --lh-snug:    1.25;
+  --lh-normal:  1.55;
+
+  --ls-tight:  -0.02em;
+  --ls-normal:  0;
+  --ls-wide:    0.04em;
+
+  /* ---------- Espaçamento (base 4px) ---------- */
+  --space-0: 0; --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px;
+  --space-5: 20px; --space-6: 24px; --space-8: 32px; --space-10: 40px;
+  --space-12: 48px; --space-16: 64px; --space-20: 80px;
+
+  /* ---------- Raios ---------- */
+  --radius-none: 0;
+  --radius-sm:   8px;
+  --radius-md:   12px;
+  --radius-lg:   16px;
+  --radius-xl:   20px;
+  --radius-2xl:  28px;
+  --radius-pill: 999px;
+
+  /* ---------- Sombras (neutras) ---------- */
+  --shadow-sm:  0 1px 2px rgba(20, 20, 20, 0.06);
+  --shadow-md:  0 6px 20px rgba(20, 20, 20, 0.08);
+  --shadow-lg:  0 14px 36px rgba(20, 20, 20, 0.10);
+  --shadow-xl:  0 24px 50px rgba(20, 20, 20, 0.14);
+
+  /* ---------- Movimento ---------- */
+  --motion-fast: 140ms; --motion-base: 240ms; --motion-slow: 380ms;
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out:      cubic-bezier(0, 0, 0.2, 1);
+
+  /* ---------- Breakpoints ---------- */
+  --bp-sm: 640px; --bp-md: 768px; --bp-lg: 1024px; --bp-xl: 1280px;
+}
+
+/* =================================================================
+   TOKENS SEMÂNTICOS — DARK
+   ================================================================= */
+:root[data-theme="dark"] {
+  --bg-canvas:        #161616;
+  --bg-surface:       #1F1F1F;
+  --bg-surface-alt:   #262626;
+  --bg-inverse:       #F5F5F5;
+
+  --bg-primary:       #FB6334;
+  --bg-primary-hover: #FB8A5E;
+  --bg-primary-soft:  #3A1A10;
+
+  --text-primary:     #F5F5F5;
+  --text-secondary:   #B0B0B0;
+  --text-muted:       #7A7A7A;
+  --text-on-primary:  #1A1A1B;
+  --text-on-inverse:  #1A1A1B;
+  --text-link:        #FB8A5E;
+
+  --border-default:   #333333;
+  --border-strong:    #444444;
+  --divider:          #262626;
+
+  --ring-focus:       rgba(251, 99, 52, 0.40);
+  --overlay:          rgba(0, 0, 0, 0.6);
+
+  --success: #3DD167;  --success-soft: #0F2E18;
+  --warning: #F5B83C;  --warning-soft: #2E2410;
+  --danger:  #FF5A5A;  --danger-soft:  #2E1414;
+  --purple:  #B36BF5;  --purple-soft:  #251238;
+  --blue:    #4CB6FF;  --blue-soft:    #112A40;
+
+  --shadow-sm:  0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md:  0 6px 20px rgba(0, 0, 0, 0.55);
+  --shadow-lg:  0 14px 36px rgba(0, 0, 0, 0.6);
+  --shadow-xl:  0 24px 50px rgba(0, 0, 0, 0.65);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-canvas:#161616; --bg-surface:#1F1F1F; --bg-surface-alt:#262626; --bg-inverse:#F5F5F5;
+    --bg-primary:#FB6334; --bg-primary-hover:#FB8A5E; --bg-primary-soft:#3A1A10;
+    --text-primary:#F5F5F5; --text-secondary:#B0B0B0; --text-muted:#7A7A7A;
+    --text-on-primary:#1A1A1B; --text-on-inverse:#1A1A1B; --text-link:#FB8A5E;
+    --border-default:#333333; --border-strong:#444444; --divider:#262626;
+    --ring-focus:rgba(251,99,52,0.40); --overlay:rgba(0,0,0,0.6);
+    --success:#3DD167; --success-soft:#0F2E18; --warning:#F5B83C; --warning-soft:#2E2410;
+    --danger:#FF5A5A; --danger-soft:#2E1414; --purple:#B36BF5; --purple-soft:#251238;
+    --blue:#4CB6FF; --blue-soft:#112A40;
+    --shadow-sm:0 1px 2px rgba(0,0,0,0.5); --shadow-md:0 6px 20px rgba(0,0,0,0.55);
+    --shadow-lg:0 14px 36px rgba(0,0,0,0.6); --shadow-xl:0 24px 50px rgba(0,0,0,0.65);
+  }
+}

@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plano de Ação — Estrateg[IA]</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="gesti-tokens.css">
+<link rel="stylesheet" href="gesti-components.css">
+<style>
+  /* Funnel Display nos títulos, Poppins nos textos */
+  body, button, input, select, textarea, p, span, a, div {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif !important;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Funnel Display', sans-serif !important;
+  }
+  .g-logo { font-family: 'Funnel Display', sans-serif !important; }
+  body { margin: 0; background: var(--bg-canvas); color: var(--text-primary); -webkit-font-smoothing: antialiased; }
+
+  /* ===== Header (igual brand-system.html) ===== */
+  .hdr {
+    position: sticky; top: 0; z-index: 50;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 60px; padding: 0 32px;
+    background: color-mix(in srgb, var(--bg-canvas) 80%, transparent);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid var(--divider);
+  }
+  .hdr-right { display: flex; align-items: center; gap: 12px; }
+  .mode-badge {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.03em;
+    color: var(--bg-primary); background: var(--bg-primary-soft);
+    padding: 6px 14px; border-radius: var(--radius-pill);
+  }
+  .tt {
+    width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-default);
+    background: var(--bg-surface); cursor: pointer; display: flex; align-items: center;
+    justify-content: center; font-size: 18px; color: var(--text-primary);
+    transition: all 200ms ease;
+  }
+  .tt:hover { background: var(--bg-surface-alt); transform: rotate(15deg); }
+
+  /* ===== Container ===== */
+  .container { max-width: 960px; margin: 0 auto; padding: 0 32px; }
+  .section { padding: clamp(48px, 8vw, 96px) 0; }
+  .center { text-align: center; }
+  .eyebrow { font-size: 13px; font-weight: 700; color: var(--bg-primary); text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 16px; }
+  .h2 { font-family: 'Overused Grotesk'; font-weight: 900; letter-spacing: -0.02em; line-height: 1.07; margin: 0; font-size: clamp(28px, 4vw, 44px); }
+  .sub { font-size: clamp(15px, 2vw, 18px); line-height: 1.5; color: var(--text-secondary); margin: 12px auto 0; max-width: 520px; }
+
+  /* ===== Hero bento - liquid glass (copiado de brand-system.html) ===== */
+  .hero-section {
+    position: relative; overflow: hidden;
+    padding: clamp(48px, 7vw, 88px) 0;
+    background: linear-gradient(140deg,#2a1810 0%,#160d08 55%,#000000 100%);
+    min-height: 460px;
+  }
+  .blob { position: absolute; border-radius: 50%; filter: blur(70px); opacity: .5; z-index: 0; }
+  .b1 { width: 480px; height: 480px; background: #F23C00; top: -120px; left: -100px; opacity: .6; }
+  .b2 { width: 380px; height: 380px; background: #B92A0A; bottom: -100px; right: -80px; opacity: .55; }
+  .b3 { width: 240px; height: 240px; background: #FB6334; top: 40%; left: 30%; opacity: .35; }
+  .hero-content { position: relative; z-index: 1; text-align: center; color: #fff; }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 14px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+    color: #F58E6B; margin: 0 0 24px;
+  }
+  .hero-eyebrow::before, .hero-eyebrow::after {
+    content: ''; width: 36px; height: 2px; background: #F23C00; border-radius: 2px;
+  }
+  .hero-content h1 {
+    font-family: 'Overused Grotesk'; font-weight: 900; letter-spacing: -0.03em; line-height: 1.02;
+    font-size: clamp(40px, 7vw, 72px); color: #fff; margin: 0 0 20px;
+  }
+  .hero-content h1 span {
+    background: linear-gradient(135deg, #FB6334 0%, #F23C00 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-sub { font-size: clamp(16px, 2.2vw, 20px); color: rgba(255,255,255,0.78); max-width: 540px; margin: 0 auto 36px; line-height: 1.6; }
+
+  /* Hero deadline glass */
+  .hero-deadline {
+    display: inline-flex; align-items: center; gap: 16px;
+    background: rgba(255,255,255,0.10); border: 1px solid rgba(255,255,255,0.30);
+    border-radius: var(--radius-2xl); padding: 20px 32px;
+    backdrop-filter: blur(22px) saturate(1.2); -webkit-backdrop-filter: blur(22px) saturate(1.2);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.35);
+    transition: all 200ms ease;
+  }
+  .hero-deadline:hover { background: rgba(255,255,255,0.15); border-color: rgba(242,60,0,0.5); transform: translateY(-2px); }
+  .hero-deadline-icon {
+    width: 52px; height: 52px;
+    background: linear-gradient(135deg, #FB6334, #F23C00);
+    border-radius: var(--radius-md);
+    display: flex; align-items: center; justify-content: center; color: #fff;
+    flex-shrink: 0; box-shadow: 0 4px 16px rgba(242,60,0,0.4);
+  }
+  .hero-deadline-text { text-align: left; }
+  .hero-deadline-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.5); }
+  .hero-deadline-date { font-size: 18px; font-weight: 800; color: #fff; margin-top: 4px; }
+
+  /* ===== Stats - usando g-card + estrutura de stat do brand-system ===== */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 56px 0 40px; }
+  @media (max-width: 768px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .stats { grid-template-columns: 1fr; } }
+
+  .stat-card {
+    background: var(--bg-surface); border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg); padding: 22px 20px;
+    box-shadow: var(--shadow-sm);
+    transition: all 200ms ease;
+    position: relative; overflow: hidden;
+  }
+  .stat-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--brand-500), var(--brand-700));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 300ms ease;
+  }
+  .stat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  .stat-card:hover::before { transform: scaleX(1); }
+  .stat-card .cap { font-size: 13px; color: var(--text-muted); margin: 8px 0 0; font-weight: 700; }
+  .stat-card .v {
+    font-family: 'Overused Grotesk'; font-weight: 900; font-size: 38px;
+    letter-spacing: -0.02em; line-height: 1; color: var(--brand-500);
+  }
+  .stat-card--highlight { background: linear-gradient(135deg, var(--brand-500) 0%, var(--brand-700) 100%); border-color: var(--brand-700); }
+  .stat-card--highlight::before { display: none; }
+  .stat-card--highlight .cap { color: rgba(255,255,255,0.85); }
+  .stat-card--highlight .v { color: #fff; }
+
+  /* ===== Progress ===== */
+  .progress-wrap { max-width: 560px; margin: 0 auto 40px; }
+  .progress-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; }
+  .progress-label { font-size: 14px; font-weight: 600; color: var(--text-secondary); }
+  .progress-pct { font-family: 'Overused Grotesk'; font-weight: 900; font-size: 22px; color: var(--brand-700); }
+  .progress-bar {
+    height: 10px; border-radius: var(--radius-pill);
+    background: var(--gray-100); overflow: hidden; border: 1px solid var(--border-default);
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--brand-400), var(--brand-600));
+    border-radius: var(--radius-pill);
+    transition: width 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* ===== Legend - chips do design system ===== */
+  .legend { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 28px; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 14px; border-radius: 999px;
+    font-size: 13px; font-weight: 700;
+    background: var(--bg-surface-alt); color: var(--text-primary);
+    border: 1px solid var(--border-default);
+    transition: all 180ms ease;
+  }
+  .chip:hover { border-color: var(--border-strong); }
+  .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+  /* ===== Toolbar ===== */
+  .toolbar { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
+
+  /* ===== Weeks - cards do design system ===== */
+  .weeks { display: flex; flex-direction: column; gap: 16px; }
+  .week {
+    background: var(--bg-surface); border: 1px solid var(--border-default);
+    border-radius: var(--radius-xl); overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: all 200ms ease;
+  }
+  .week:hover { box-shadow: var(--shadow-md); }
+  .week.current {
+    border-color: var(--brand-500);
+    box-shadow: 0 0 0 3px var(--ring-focus), var(--shadow-md);
+  }
+  .week-head {
+    display: flex; align-items: center; gap: 16px;
+    padding: 20px 24px; cursor: pointer;
+    transition: background 180ms ease;
+    user-select: none;
+  }
+  .week-head:hover { background: var(--gray-50); }
+  .week-num {
+    width: 48px; height: 48px; background: var(--gray-100);
+    border-radius: var(--radius-md); display: flex; align-items: center;
+    justify-content: center; font-weight: 900; font-size: 14px; color: var(--text-muted);
+    flex-shrink: 0; transition: all 200ms ease;
+  }
+  .week.current .week-num { background: var(--brand-500); color: #fff; }
+  .week-info { flex: 1; min-width: 0; }
+  .week-title { font-weight: 800; font-size: 17px; letter-spacing: -0.01em; color: var(--text-primary); }
+  .week-dates {
+    font-size: 12px; color: var(--text-muted); margin-top: 5px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .week-badge {
+    font-size: 10px; font-weight: 900; color: #fff;
+    background: var(--brand-500);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    border-radius: var(--radius-pill); padding: 5px 12px;
+    animation: badgePulse 2s ease-in-out infinite;
+  }
+  @keyframes badgePulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.85; transform: scale(0.98); }
+  }
+  .week-score {
+    font-size: 13px; font-weight: 800; color: var(--text-secondary);
+    background: var(--gray-100); padding: 8px 14px; border-radius: var(--radius-md);
+    transition: all 180ms ease;
+  }
+  .week.current .week-score { background: var(--brand-50); color: var(--brand-700); }
+  .week-chev { color: var(--text-muted); transition: transform 250ms ease; font-size: 14px; }
+  .week.collapsed .week-chev { transform: rotate(-90deg); }
+  .week-tasks { max-height: 2000px; overflow: hidden; transition: max-height 400ms ease; }
+  .week.collapsed .week-tasks { max-height: 0; }
+
+  /* ===== Tasks - list items ===== */
+  .task {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 18px 24px; border-bottom: 1px solid var(--divider);
+    transition: all 150ms ease; cursor: pointer;
+  }
+  .task:last-child { border-bottom: none; }
+  .task:hover { background: var(--gray-50); }
+  .task.done { opacity: 0.55; }
+  .task-check {
+    width: 28px; height: 28px; min-width: 28px;
+    border: 2px solid var(--border-strong);
+    border-radius: var(--radius-sm); display: flex; align-items: center;
+    justify-content: center; cursor: pointer; flex-shrink: 0; margin-top: 1px;
+    transition: all 200ms ease; background: var(--bg-surface);
+  }
+  .task-check:hover { border-color: var(--brand-500); transform: scale(1.05); }
+  .task-check.checked {
+    background: var(--success); border-color: var(--success);
+    transform: scale(1.08);
+  }
+  .task-check svg { width: 14px; height: 14px; color: #fff; opacity: 0; transform: scale(0.5); transition: all 200ms ease; }
+  .task-check.checked svg { opacity: 1; transform: scale(1); }
+  .task-body { flex: 1; min-width: 0; }
+  .task-text {
+    font-size: 15px; line-height: 1.6; cursor: pointer;
+    transition: color 150ms ease; color: var(--text-primary);
+  }
+  .task-text.done { text-decoration: line-through; color: var(--text-muted); }
+  .task-tag {
+    display: inline-block; font-size: 10px; font-weight: 800; color: #fff;
+    padding: 4px 10px; border-radius: var(--radius-sm); margin-top: 10px;
+  }
+
+  /* ===== Launch Section ===== */
+  .launch {
+    position: relative; overflow: hidden;
+    padding: clamp(56px, 8vw, 96px) 0;
+    background: linear-gradient(135deg, var(--brand-500) 0%, var(--brand-700) 100%);
+    text-align: center; color: #fff;
+  }
+  .launch-date {
+    font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.15em; color: rgba(255,255,255,0.85);
+  }
+  .launch h2 {
+    font-family: 'Overused Grotesk'; font-weight: 900; letter-spacing: -0.02em;
+    font-size: clamp(24px, 4vw, 36px); color: #fff; margin: 16px 0;
+  }
+  .launch p { font-size: 17px; color: rgba(255,255,255,0.92); max-width: 480px; margin: 0 auto; line-height: 1.6; }
+
+  /* ===== Footer ===== */
+  .footer { padding: 36px 0; border-top: 1px solid var(--divider); }
+  .footer p { font-size: 13px; color: var(--text-muted); margin: 0; text-align: center; }
+
+  /* ===== Roteiros (pasta de arquivos) ===== */
+  .roteiros-section {
+    padding: clamp(48px, 8vw, 88px) 0;
+    background: var(--bg-surface-alt);
+    border-top: 1px solid var(--divider);
+    border-bottom: 1px solid var(--divider);
+  }
+  .roteiros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 28px;
+    margin-top: 40px;
+  }
+  .folder-tab {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, var(--brand-500), var(--brand-700));
+    color: #fff; font-weight: 800; font-size: 14px;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    margin-bottom: -1px; position: relative; z-index: 2;
+    box-shadow: 0 -4px 12px rgba(242,60,0,0.15);
+    margin-left: 0;
+  }
+  .folder-tab svg { width: 16px; height: 16px; }
+  .roteiro-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg);
+    padding: 32px 32px;
+    box-shadow: var(--shadow-sm);
+    transition: all 250ms ease;
+    position: relative;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    min-height: 240px;
+  }
+  .roteiro-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 4px;
+    background: linear-gradient(90deg, var(--brand-400), var(--brand-600));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 300ms ease;
+  }
+  .roteiro-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--brand-300); }
+  .roteiro-card:hover::before { transform: scaleX(1); }
+  .roteiro-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 10px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 5px 10px; border-radius: var(--radius-sm);
+    background: var(--success); color: #fff;
+    align-self: flex-start;
+    margin-bottom: 12px;
+  }
+  .roteiro-badge.em-breve {
+    background: var(--bg-surface-alt); color: var(--text-muted);
+    border: 1px dashed var(--border-strong);
+  }
+  .roteiro-titulo {
+    font-family: 'Overused Grotesk'; font-weight: 800; font-size: 19px;
+    letter-spacing: -0.01em; color: var(--text-primary); margin: 0 0 8px;
+    line-height: 1.25;
+  }
+  .roteiro-desc {
+    font-size: 14px; color: var(--text-secondary); line-height: 1.5;
+    margin: 0 0 16px;
+  }
+  .roteiro-meta {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin-bottom: 16px;
+  }
+  .roteiro-meta-item {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 11px; font-weight: 700; color: var(--text-muted);
+    background: var(--bg-surface-alt); padding: 5px 9px; border-radius: var(--radius-sm);
+  }
+  .roteiro-meta-item svg { width: 12px; height: 12px; }
+  .roteiro-actions { margin-top: auto; display: flex; gap: 10px; }
+  .roteiro-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    border: none; transition: all 180ms ease; text-decoration: none;
+    font-family: inherit;
+    flex-shrink: 0;
+  }
+  .roteiro-btn--primary {
+    background: var(--brand-500); color: #fff;
+  }
+  .roteiro-btn--primary:hover { background: var(--brand-700); transform: translateY(-1px); }
+  .roteiro-btn--ghost {
+    background: transparent; color: var(--text-secondary);
+    border: 1px solid var(--border-default);
+  }
+  .roteiro-btn--ghost:hover { border-color: var(--border-strong); color: var(--text-primary); background: var(--bg-surface-alt); }
+  .roteiro-btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+  /* ===== Carrossel de Cards ===== */
+  .roteiros-carousel {
+    position: relative;
+    margin-top: 0;
+    padding-top: 4px;
+  }
+  .roteiros-viewport {
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+  }
+  .roteiros-viewport {
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+  }
+  .roteiros-track {
+    display: flex;
+    gap: 10px;
+    transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 20px 20px 20px;
+  }
+  .roteiros-track > .roteiro-card {
+    flex: 0 0 calc((100% - 40px) / 3);
+    min-width: 280px;
+    margin: 0;
+  }
+  .carousel-arrow {
+    position: absolute;
+    top: calc(50% + 4px);
+    transform: translateY(-50%);
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-default);
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-primary);
+    transition: all 200ms ease;
+    z-index: 5;
+  }
+  .carousel-arrow svg { width: 18px; height: 18px; }
+  .carousel-arrow:hover {
+    background: var(--brand-500); color: #fff;
+    border-color: var(--brand-500);
+    transform: translateY(-50%) scale(1.08);
+  }
+  .carousel-arrow:disabled {
+    opacity: 0.35; cursor: not-allowed;
+  }
+  .carousel-arrow:disabled:hover {
+    background: var(--bg-surface); color: var(--text-primary);
+    border-color: var(--border-default);
+    transform: translateY(-50%);
+  }
+  .carousel-arrow--prev { left: -22px; }
+  .carousel-arrow--next { right: -22px; }
+  .carousel-dots {
+    display: flex; justify-content: center; gap: 8px;
+    margin-top: 16px;
+  }
+  .carousel-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--border-strong);
+    border: none; cursor: pointer;
+    transition: all 250ms ease;
+  }
+  .carousel-dot.active {
+    background: var(--brand-500);
+    width: 24px; border-radius: 4px;
+  }
+  @media (max-width: 900px) {
+    .roteiros-track > .roteiro-card {
+      flex: 0 0 calc((100% - 20px) / 2);
+    }
+  }
+  @media (max-width: 600px) {
+    .roteiros-track > .roteiro-card {
+      flex: 0 0 100%;
+    }
+    .carousel-arrow--prev { left: 8px; }
+    .carousel-arrow--next { right: 8px; }
+  }
+  .folder-stack { position: relative; }
+  .folder-stack::before {
+    content: '';
+    position: absolute; top: 12px; left: 0; right: 0; bottom: 0;
+    background: var(--bg-surface); border: 1px solid var(--border-default);
+    border-radius: var(--radius-lg); z-index: 0;
+    box-shadow: var(--shadow-sm);
+    transform: translateY(8px);
+  }
+  .folder-stack > * { position: relative; z-index: 1; }
+  .folder-stack > .roteiros-carousel { margin-top: -1px; }
+
+  /* ===== Modal de Entregáveis ===== */
+  .modal-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 100;
+    display: flex; align-items: center; justify-content: center;
+    padding: 20px;
+    opacity: 0; pointer-events: none;
+    transition: opacity 250ms ease;
+  }
+  .modal-overlay.open { opacity: 1; pointer-events: auto; }
+  .modal {
+    background: var(--bg-surface);
+    border-radius: var(--radius-xl);
+    max-width: 560px; width: 100%;
+    max-height: 90vh; overflow-y: auto;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.3);
+    transform: scale(0.95) translateY(20px);
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .modal-overlay.open .modal { transform: scale(1) translateY(0); }
+  .modal-head {
+    display: flex; align-items: center; gap: 16px;
+    padding: 24px 28px;
+    border-bottom: 1px solid var(--divider);
+  }
+  .modal-icon {
+    width: 48px; height: 48px;
+    background: linear-gradient(135deg, var(--brand-400), var(--brand-600));
+    border-radius: var(--radius-md);
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(242,60,0,0.25);
+  }
+  .modal-icon svg { width: 24px; height: 24px; }
+  .modal-info { flex: 1; min-width: 0; }
+  .modal-titulo {
+    font-family: 'Overused Grotesk'; font-weight: 800; font-size: 20px;
+    letter-spacing: -0.01em; color: var(--text-primary); margin: 0 0 4px;
+  }
+  .modal-subtitulo {
+    font-size: 13px; color: var(--text-muted); margin: 0;
+  }
+  .modal-close {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--bg-surface-alt); border: 1px solid var(--border-default);
+    color: var(--text-secondary); cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 180ms ease; flex-shrink: 0;
+  }
+  .modal-close:hover { background: var(--bg-canvas); color: var(--text-primary); transform: rotate(90deg); }
+  .modal-body { padding: 24px 28px 28px; }
+  .modal-quote {
+    background: var(--bg-surface-alt);
+    border-left: 3px solid var(--brand-500);
+    padding: 14px 16px;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    font-size: 13px;
+    font-style: italic;
+    color: var(--text-secondary);
+    margin: 0 0 24px;
+  }
+  .modal-list { display: flex; flex-direction: column; gap: 12px; }
+  .modal-item {
+    display: flex; align-items: center; gap: 16px;
+    padding: 16px 18px;
+    background: var(--bg-canvas);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-md);
+    transition: all 200ms ease;
+  }
+  .modal-item:hover { border-color: var(--brand-300); background: var(--bg-surface); }
+  .modal-item-icon {
+    width: 40px; height: 40px;
+    border-radius: var(--radius-sm);
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; flex-shrink: 0;
+  }
+  .modal-item-icon--slides { background: linear-gradient(135deg, var(--brand-400), var(--brand-600)); }
+  .modal-item-icon--glossario { background: linear-gradient(135deg, #4A9CB5, #2A6C82); }
+  .modal-item-icon svg { width: 20px; height: 20px; }
+  .modal-item-info { flex: 1; min-width: 0; }
+  .modal-item-titulo {
+    font-weight: 800; font-size: 14px;
+    color: var(--text-primary); margin: 0 0 2px;
+  }
+  .modal-item-desc {
+    font-size: 12px; color: var(--text-muted); margin: 0;
+  }
+  .modal-item-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 8px 14px; border-radius: var(--radius-sm);
+    font-size: 12px; font-weight: 700; cursor: pointer;
+    border: none; transition: all 180ms ease;
+    text-decoration: none; font-family: inherit;
+    background: var(--brand-500); color: #fff;
+  }
+  .modal-item-btn:hover { background: var(--brand-700); transform: translateY(-1px); }
+  .modal-item-btn--disabled {
+    background: var(--gray-100); color: var(--text-muted);
+    cursor: not-allowed;
+  }
+  .modal-item-btn--disabled:hover { background: var(--gray-100); transform: none; }
+  .modal-item-btn svg { width: 12px; height: 12px; }
+  .modal-footer-note {
+    margin-top: 20px; padding-top: 16px;
+    border-top: 1px solid var(--divider);
+    font-size: 12px; color: var(--text-muted);
+    text-align: center;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 768px) {
+    .hdr { padding: 0 16px; }
+    .container { padding: 0 16px; }
+    .hero-deadline { padding: 16px 20px; gap: 12px; }
+    .hero-deadline-icon { width: 44px; height: 44px; }
+    .week-head { padding: 16px; gap: 12px; }
+    .task { padding: 16px; gap: 12px; }
+    .week-num { width: 44px; height: 44px; font-size: 13px; }
+    .roteiros-grid { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+  }
+</style>
+</head>
+<body class="g-root">
+
+<header class="hdr">
+  <span class="g-logo" style="font-size: 18px;">Estrateg<span style="color:var(--bg-primary);font-weight:300">[IA]</span></span>
+  <div class="hdr-right">
+    <span class="mode-badge">1h/dia · seg–sex</span>
+    <button class="tt" id="themeToggle" aria-label="Alternar tema">◐</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero-section">
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+  <div class="container">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Plano de Ação</p>
+      <h1>Do preparo ao <span>lançamento</span></h1>
+      <p class="hero-sub">35 dias de preparação para chegar pronto ao grande dia. Um passo de cada vez.</p>
+      <div class="hero-deadline">
+        <div class="hero-deadline-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2"/>
+            <path d="M16 2v4M8 2v4M3 10h18"/>
+          </svg>
+        </div>
+        <div class="hero-deadline-text">
+          <div class="hero-deadline-label">Data de Lançamento</div>
+          <div class="hero-deadline-date">03 de agosto de 2026</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROTEIROS -->
+<section class="roteiros-section">
+  <div class="container">
+    <div class="center" style="margin-bottom: 32px;">
+      <p class="eyebrow">Entregáveis</p>
+      <h2 class="h2">Roteiros prontos</h2>
+      <p class="sub">Aqui estão os roteiros já escritos e validados, prontos pra gravar.</p>
+    </div>
+
+    <div class="folder-stack">
+      <div class="folder-tab">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+        </svg>
+        Conteúdo / Roteiros
+      </div>
+
+    <div class="roteiros-carousel">
+      <button class="carousel-arrow carousel-arrow--prev" id="carPrev" aria-label="Anterior" disabled>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </button>
+
+      <div class="roteiros-viewport">
+        <div class="roteiros-track" id="roteirosTrack">
+          <!-- EP1 - Pronto -->
+          <div class="roteiro-card">
+            <span class="roteiro-badge">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12.5l5 5 9-11"/>
+              </svg>
+              Pronto
+            </span>
+            <h3 class="roteiro-titulo">Ep1 — Dominando o Claude Code</h3>
+            <p class="roteiro-desc">8 conceitos fundamentais pra gestores de saúde usarem IA de verdade (não só como chatbot).</p>
+            <div class="roteiro-meta">
+              <span class="roteiro-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                ~20 min
+              </span>
+              <span class="roteiro-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+                .md
+              </span>
+              <span class="roteiro-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                44 falas
+              </span>
+            </div>
+            <div class="roteiro-actions">
+              <a class="roteiro-btn roteiro-btn--primary" href="../../Conteudo/roteiros/ep01-roteiro-rosa-gravacao.md" download title="Baixar roteiro em Markdown">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+              </a>
+              <a class="roteiro-btn roteiro-btn--ghost" href="../../Conteudo/roteiros/ep01-roteiro-rosa-gravacao.md" target="_blank" title="Ver roteiro no navegador">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+                </svg>
+              </a>
+              <button class="roteiro-btn roteiro-btn--ghost" data-action="open-entregaveis" type="button" title="Ver entregáveis prometidos">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 7h-9M14 17H5M17 20a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM9 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- EP2 - Em breve -->
+          <div class="roteiro-card">
+            <span class="roteiro-badge em-breve">Em breve</span>
+            <h3 class="roteiro-titulo">Ep2 — Chatbot não é agente</h3>
+            <p class="roteiro-desc">Por que 90% dos gestores usam IA errada e como virar esse jogo com a Skill de Apresentações.</p>
+            <div class="roteiro-meta">
+              <span class="roteiro-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                ~6–8 min
+              </span>
+              <span class="roteiro-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+                .md
+              </span>
+            </div>
+            <div class="roteiro-actions">
+              <button class="roteiro-btn roteiro-btn--primary" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+              </button>
+              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+                </svg>
+              </button>
+              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 7h-9M14 17H5M17 20a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM9 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- EP3 - Em breve -->
+          <div class="roteiro-card">
+            <span class="roteiro-badge em-breve">Em breve</span>
+            <h3 class="roteiro-titulo">Ep3 — Ata → 5W2H com IA</h3>
+            <p class="roteiro-desc">Tutorial passo a passo: como usar o Claude Code pra transformar ata de reunião em plano de ação.</p>
+            <div class="roteiro-meta">
+              <span class="roteiro-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                ~8–10 min
+              </span>
+              <span class="roteiro-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+                .md
+              </span>
+            </div>
+            <div class="roteiro-actions">
+              <button class="roteiro-btn roteiro-btn--primary" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+              </button>
+              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+                </svg>
+              </button>
+              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 7h-9M14 17H5M17 20a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM9 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- EP4 - Em breve -->
+          <div class="roteiro-card">
+            <span class="roteiro-badge em-breve">Em breve</span>
+            <h3 class="roteiro-titulo">Ep4 — Instalando o Claude Code</h3>
+            <p class="roteiro-desc">Passo a passo: como instalar o Claude Code no seu computador do zero, sem medo do terminal.</p>
+            <div class="roteiro-meta">
+              <span class="roteiro-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                ~7–9 min
+              </span>
+              <span class="roteiro-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+                .md
+              </span>
+            </div>
+            <div class="roteiro-actions">
+              <button class="roteiro-btn roteiro-btn--primary" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+              </button>
+              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+                </svg>
+              </button>
+              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 7h-9M14 17H5M17 20a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM9 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- EP5 - Em breve -->
+          <div class="roteiro-card">
+            <span class="roteiro-badge em-breve">Em breve</span>
+            <h3 class="roteiro-titulo">Ep5 — Primeiro CLAUDE.md</h3>
+            <p class="roteiro-desc">Como montar a memória do seu projeto: o primeiro CLAUDE.md do seu hospital ou setor.</p>
+            <div class="roteiro-meta">
+              <span class="roteiro-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                ~8–10 min
+              </span>
+              <span class="roteiro-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+                .md
+              </span>
+            </div>
+            <div class="roteiro-actions">
+              <button class="roteiro-btn roteiro-btn--primary" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+              </button>
+              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+                </svg>
+              </button>
+              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 7h-9M14 17H5M17 20a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM9 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- EP6 - Em breve -->
+          <div class="roteiro-card">
+            <span class="roteiro-badge em-breve">Em breve</span>
+            <h3 class="roteiro-titulo">Ep6 — Sua primeira Skill</h3>
+            <p class="roteiro-desc">Criando uma skill POP de auditoria de prontuário que a IA executa sozinha.</p>
+            <div class="roteiro-meta">
+              <span class="roteiro-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                ~10 min
+              </span>
+              <span class="roteiro-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+                .md
+              </span>
+            </div>
+            <div class="roteiro-actions">
+              <button class="roteiro-btn roteiro-btn--primary" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+              </button>
+              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+                </svg>
+              </button>
+              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 7h-9M14 17H5M17 20a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM9 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- EP7 - Em breve -->
+          <div class="roteiro-card">
+            <span class="roteiro-badge em-breve">Em breve</span>
+            <h3 class="roteiro-titulo">Ep7 — Conectando com MCP</h3>
+            <p class="roteiro-desc">Conectando o Claude Code às planilhas, formulários e sistemas do seu hospital.</p>
+            <div class="roteiro-meta">
+              <span class="roteiro-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                ~9–11 min
+              </span>
+              <span class="roteiro-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+                .md
+              </span>
+            </div>
+            <div class="roteiro-actions">
+              <button class="roteiro-btn roteiro-btn--primary" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+              </button>
+              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+                </svg>
+              </button>
+              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 7h-9M14 17H5M17 20a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM9 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- EP8 - Em breve -->
+          <div class="roteiro-card">
+            <span class="roteiro-badge em-breve">Em breve</span>
+            <h3 class="roteiro-titulo">Ep8 — Sub-agents na prática</h3>
+            <p class="roteiro-desc">Montando sua equipe multidisciplinar de IAs: auditor, gerador de relatório e revisor.</p>
+            <div class="roteiro-meta">
+              <span class="roteiro-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                ~12 min
+              </span>
+              <span class="roteiro-meta-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+                .md
+              </span>
+            </div>
+            <div class="roteiro-actions">
+              <button class="roteiro-btn roteiro-btn--primary" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+              </button>
+              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+                </svg>
+              </button>
+              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 7h-9M14 17H5M17 20a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM9 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-arrow carousel-arrow--next" id="carNext" aria-label="Próximo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </button>
+
+      <div class="carousel-dots" id="carDots"></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats + Progress -->
+<section class="section">
+  <div class="container">
+    <div class="center" style="margin-bottom: 32px;">
+      <p class="eyebrow">Visão geral</p>
+      <h2 class="h2">Onde você está hoje</h2>
+      <p class="sub">Acompanhe seu progresso até o dia do lançamento.</p>
+    </div>
+
+    <div class="stats">
+      <div class="stat-card">
+        <div class="v" id="diasNum">–</div>
+        <p class="cap">Dias restantes</p>
+      </div>
+      <div class="stat-card stat-card--highlight">
+        <div class="v" id="feitasNum">0</div>
+        <p class="cap">Tarefas feitas</p>
+      </div>
+      <div class="stat-card">
+        <div class="v" id="totalNum">0</div>
+        <p class="cap">Total de tarefas</p>
+      </div>
+      <div class="stat-card">
+        <div class="v" id="pctNum">0%</div>
+        <p class="cap">Progresso</p>
+      </div>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="progress-header">
+        <span class="progress-label">Progresso geral</span>
+        <span class="progress-pct" id="progressPct">0%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="barFill"></div>
+      </div>
+    </div>
+
+    <div class="legend" id="legend"></div>
+    <div class="toolbar">
+      <button class="g-btn" data-variant="tonal" data-palette="mono" data-size="md" id="expandAll">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 8l8-6 8 6M4 16l8 6 8-6"/>
+        </svg>
+        Expandir
+      </button>
+      <button class="g-btn" data-variant="tonal" data-palette="mono" data-size="md" id="collapseAll">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 8l8-6 8 6M4 16l8 6 8-6"/>
+        </svg>
+        Recolher
+      </button>
+      <button class="g-btn" data-variant="tonal" data-palette="error" data-size="md" id="resetBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+          <path d="M3 3v5h5"/>
+        </svg>
+        Resetar
+      </button>
+    </div>
+
+    <div class="weeks" id="weeks"></div>
+  </div>
+</section>
+
+<!-- Modal de Entregáveis do Ep1 -->
+<div class="modal-overlay" id="modalEntregaveis" aria-hidden="true">
+  <div class="modal" role="dialog" aria-labelledby="modal-titulo">
+    <div class="modal-head">
+      <div class="modal-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 7h-9M14 17H5M17 20a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM9 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+        </svg>
+      </div>
+      <div class="modal-info">
+        <h3 class="modal-titulo" id="modal-titulo">Entregáveis do Ep1</h3>
+        <p class="modal-subtitulo">O que a Rosa prometeu no roteiro</p>
+      </div>
+      <button class="modal-close" data-action="close-modal" aria-label="Fechar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-quote">
+        "Se você se inscreveu agora, vai receber nos próximos dias a Skill de Apresentações Profissionais — uma habilidade que eu mesma criei pra você gerar slides de treinamento e reuniões em segundos, sem precisar formatar nada."
+      </div>
+
+      <div class="modal-list">
+        <!-- Item: Skill de Slides -->
+        <div class="modal-item">
+          <div class="modal-item-icon modal-item-icon--slides">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <path d="M3 9h18M9 21V9"/>
+            </svg>
+          </div>
+          <div class="modal-item-info">
+            <p class="modal-item-titulo">Skill de Apresentações Profissionais</p>
+            <p class="modal-item-desc">Gera slides profissionais de treinamento e reuniões em segundos.</p>
+          </div>
+          <a class="modal-item-btn" href="#" data-href="skill-slides">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+            Acessar
+          </a>
+        </div>
+
+        <!-- Item: Glossário -->
+        <div class="modal-item">
+          <div class="modal-item-icon modal-item-icon--glossario">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+            </svg>
+          </div>
+          <div class="modal-item-info">
+            <p class="modal-item-titulo">Glossário — 8 Conceitos</p>
+            <p class="modal-item-desc">Cada termo explicado: loop agêntico, CLAUDE.md, skills, MCPs e mais.</p>
+          </div>
+          <a class="modal-item-btn" href="#" data-href="glossario" style="background:#4A9CB5;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+            Acessar
+          </a>
+        </div>
+      </div>
+
+      <p class="modal-footer-note">Os links serão adicionados pela Rosa em breve.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Launch -->
+<section class="launch">
+  <div class="launch-content">
+    <div class="launch-date">03 de agosto · segunda-feira</div>
+    <h2>Dia 1 — Gravar e publicar</h2>
+    <p>Ep1 gravado + post de lançamento no Instagram + post no LinkedIn. A partir daqui, cadência.</p>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><p>Estrateg[IA] · Suas marcações ficam salvas neste navegador · Design System</p></div></footer>
+
+<script>
+const cats = {
+  estrategia: { nome: "Estratégia",    cor: "#5C504A" },
+  marca:      { nome: "Marca",          cor: "#F23C00" },
+  entregavel: { nome: "Entregável",     cor: "#D99514" },
+  site:       { nome: "Site",           cor: "#4A9CB5" },
+  insta:      { nome: "Instagram/LI",   cor: "#E5484D" },
+  gravacao:   { nome: "Gravação",       cor: "#1FA85A" },
+  ep:         { nome: "Roteiro",        cor: "#8A4B2E" },
+};
+
+const plano = [
+  { id: "s0", titulo: "Semana 0 — Fundação", datas: "18–20 jun · 3 dias", ini: "2026-06-18", fim: "2026-06-20", tarefas: [
+    { id: "s0t1", cat: "estrategia", txt: "Dia 1 (qua) · 0:00–0:20 — Reler Estratégia; marcar cunha: Enfermagem, NEP, CCIH, NSP, Qualidade", feito: true },
+    { id: "s0t2", cat: "estrategia", txt: "Dia 1 (qua) · 0:20–0:40 — Reler Plano-90-dias inteiro; sublinhar o que já depende de você" },
+    { id: "s0t3", cat: "marca", txt: "Dia 1 (qua) · 0:40–1:00 — Escrever bio definitiva do LinkedIn e salvar em bio-final.md", feito: true },
+    { id: "s0t4", cat: "marca", txt: "Dia 2 (qui) · 0:00–0:30 — Abrir projeto gesti; listar o que dá pra reaproveitar (logo, paleta, mascote)" },
+    { id: "s0t5", cat: "marca", txt: "Dia 2 (qui) · 0:30–1:00 — Exportar Gesti v1 estática (pose parada + acenando) em PNG", feito: true },
+    { id: "s0t6", cat: "site", txt: "Dia 3 (sex) · 0:00–0:30 — Escolher ferramenta de captura: Brevo (recomendado, grátis até 300 contatos)" },
+    { id: "s0t7", cat: "site", txt: "Dia 3 (sex) · 0:30–1:00 — Criar conta Brevo + lista 'Modo IA Saúde — Gestores'; copiar ID da lista" },
+  ]},
+  { id: "s1", titulo: "Semana 1 — Ep1 escrito + identidade", datas: "23–27 jun · 5 dias", ini: "2026-06-23", fim: "2026-06-27", tarefas: [
+    { id: "s1t1", cat: "ep", txt: "Dia 4 (seg) · 0:00–0:30 — Ler Temporada-1.md e copiar resumo do Ep1", feito: true },
+    { id: "s1t2", cat: "ep", txt: "Dia 4 (seg) · 0:30–1:00 — Escrever abertura (60s): gancho + promessa do Ep1", feito: true },
+    { id: "s1t3", cat: "ep", txt: "Dia 5 (ter) · 0:00–0:40 — Escrever passo a passo da demo 'skill de apresentações → slides gerados'", feito: true },
+    { id: "s1t4", cat: "ep", txt: "Dia 5 (ter) · 0:40–1:00 — Escrever CTA final do Ep1 (baixe o checklist + entre na lista)", feito: true },
+    { id: "s1t5", cat: "marca", txt: "Dia 6 (qua) · 0:00–0:30 — Fechar logo simples do Modo IA Saúde; exportar SVG + PNG" },
+    { id: "s1t6", cat: "marca", txt: "Dia 6 (qua) · 0:30–1:00 — Documentar paleta hex + fonte oficial em identidade-final.md" },
+    { id: "s1t7", cat: "ep", txt: "Dia 7 (qui) · 0:00–1:00 — Leitura em voz alta do roteiro; cortar excessos; marcar tempos por bloco", feito: true },
+    { id: "s1t8", cat: "entregavel", txt: "Dia 8 (sex) · 0:00–1:00 — Escrever checklist '10 rotinas dos núcleos de gestão que a IA já resolve hoje'" },
+  ]},
+  { id: "s2", titulo: "Semana 2 — Site + perfis prontos", datas: "30 jun–4 jul · 5 dias", ini: "2026-06-30", fim: "2026-07-04", tarefas: [
+    { id: "s2t1", cat: "insta", txt: "Dia 9 (seg) · 0:00–0:30 — LinkedIn: headline nova + URL personalizada linkedin.com/in/rosakethllyn + foto coerente" },
+    { id: "s2t2", cat: "insta", txt: "Dia 9 (seg) · 0:30–1:00 — Escrever 1º post LinkedIn (reaproveita abertura do Ep1 sem revelar vídeo); publicar" },
+    { id: "s2t3", cat: "site", txt: "Dia 10 (ter) · 0:00–0:40 — Criar landing page simples em Carrd/Typedream (headline, subhead, form, botão)" },
+    { id: "s2t4", cat: "site", txt: "Dia 10 (ter) · 0:40–1:00 — Conectar formulário à lista do Brevo; testar envio pro e-mail pessoal" },
+    { id: "s2t5", cat: "entregavel", txt: "Dia 11 (qua) · 0:00–0:30 — Pegar skill-apresentacoes.md e colar no Canva (template de e-book)" },
+    { id: "s2t6", cat: "entregavel", txt: "Dia 11 (qua) · 0:30–1:00 — Aplicar paleta + logo + Gesti; exportar PDF; salvar em skill-apresentacoes.pdf" },
+    { id: "s2t7", cat: "site", txt: "Dia 12 (qui) · 0:00–0:40 — Subir PDF no Drive com link público; colar no botão 'Baixar Skill' da landing" },
+    { id: "s2t8", cat: "site", txt: "Dia 12 (qui) · 0:40–1:00 — Disparar e-mail automático via Brevo confirmando link da Skill; testar fluxo" },
+    { id: "s2t9", cat: "insta", txt: "Dia 13 (sex) · 0:00–0:30 — Instagram: nome 'Rosa Kethllyn · IA na Gestão da Saúde' + bio + foto" },
+    { id: "s2t10", cat: "insta", txt: "Dia 13 (sex) · 0:30–1:00 — Criar templates de post no Canva (capa + card interno); salvar como template" },
+  ]},
+  { id: "s3", titulo: "Semana 3 — Conteúdo + Ep2/Ep3", datas: "7–11 jul · 5 dias", ini: "2026-07-07", fim: "2026-07-11", tarefas: [
+    { id: "s3t1", cat: "insta", txt: "Dia 14 (seg) · 0:00–0:30 — Post 1 IG: apresentação (quem é você e pra quem é o perfil)" },
+    { id: "s3t2", cat: "insta", txt: "Dia 14 (seg) · 0:30–1:00 — Post 2 IG: apresenta a Gesti (mascote)" },
+    { id: "s3t3", cat: "ep", txt: "Dia 15 (ter) · 0:00–0:30 — Copiar resumo do Ep2 ('Chatbot não é agente') do Temporada-1.md" },
+    { id: "s3t4", cat: "ep", txt: "Dia 15 (ter) · 0:30–1:00 — Escrever abertura (60s) + 2 exemplos contrastantes (amador x processo)" },
+    { id: "s3t5", cat: "insta", txt: "Dia 16 (qua) · 0:00–0:30 — Post 3 IG: a dor 'gestão da saúde no improviso'" },
+    { id: "s3t6", cat: "insta", txt: "Dia 16 (qua) · 0:30–1:00 — Post LinkedIn #2: recorte da dor do gestor (texto curto, sem link)" },
+    { id: "s3t7", cat: "ep", txt: "Dia 17 (qui) · 0:00–1:00 — Escrever roteiro do Ep3 ('Slides profissionais com IA'), aproveitando a skill já criada" },
+    { id: "s3t8", cat: "gravacao", txt: "Dia 18 (sex) · 0:00–0:40 — Testar câmera + mic de lapela + iluminação (luminária virada pra parede); gravar teste 2min" },
+    { id: "s3t9", cat: "gravacao", txt: "Dia 18 (sex) · 0:40–1:00 — Ouvir teste; anotar 3 ajustes; salvar em setup-notas.md" },
+  ]},
+  { id: "s4", titulo: "Semana 4 — Ep1 e Ep2 gravados", datas: "14–18 jul · 5 dias", ini: "2026-07-14", fim: "2026-07-18", tarefas: [
+    { id: "s4t1", cat: "gravacao", txt: "Dia 19 (seg) · 0:00–0:20 — Ensaio rápido: ler roteiro do Ep1 em voz alta 1 vez" },
+    { id: "s4t2", cat: "gravacao", txt: "Dia 19 (seg) · 0:20–1:00 — Gravar da abertura até o fim da demo (várias takes, não precisa ser perfeito)" },
+    { id: "s4t3", cat: "gravacao", txt: "Dia 20 (ter) · 0:00–1:00 — Gravar CTA + 1 take de encerramento; escolher os melhores cortes" },
+    { id: "s4t4", cat: "gravacao", txt: "Dia 21 (qua) · 0:00–1:00 — Editar Ep1 no CapCut: cortes, legendas automáticas, thumbnail com a Gesti; exportar MP4" },
+    { id: "s4t5", cat: "gravacao", txt: "Dia 22 (qui) · 0:00–0:20 — Ensaio Ep2" },
+    { id: "s4t6", cat: "gravacao", txt: "Dia 22 (qui) · 0:20–1:00 — Gravar Ep2 inteiro (conceitual, fica em 6–8 min)" },
+    { id: "s4t7", cat: "gravacao", txt: "Dia 23 (sex) · 0:00–0:30 — Editar Ep2 no CapCut (mais simples, sem demo)" },
+    { id: "s4t8", cat: "insta", txt: "Dia 23 (sex) · 0:30–1:00 — Posts 4 e 5 IG: dica prática + bastidor 'vem aí o canal'" },
+  ]},
+  { id: "s5", titulo: "Semana 5 — YouTube + Ep3", datas: "21–25 jul · 5 dias", ini: "2026-07-21", fim: "2026-07-25", tarefas: [
+    { id: "s5t1", cat: "marca", txt: "Dia 24 (seg) · 0:00–0:30 — Criar canal YouTube 'Modo IA Saúde'; capa (1130x640) + template de thumbnail" },
+    { id: "s5t2", cat: "marca", txt: "Dia 24 (seg) · 0:30–1:00 — Escrever descrição fixa do canal + about (não publicar ainda)" },
+    { id: "s5t3", cat: "marca", txt: "Dia 25 (ter) · 0:00–1:00 — Criar vinheta curta (5s abertura + 5s encerramento) com Gesti + música do CapCut" },
+    { id: "s5t4", cat: "gravacao", txt: "Dia 26 (qua) · 0:00–0:20 — Ensaio Ep3" },
+    { id: "s5t5", cat: "gravacao", txt: "Dia 26 (qua) · 0:20–1:00 — Gravar Ep3 (mostrando tela do Claude com skill de apresentações)" },
+    { id: "s5t6", cat: "gravacao", txt: "Dia 27 (qui) · 0:00–0:30 — Editar Ep3 (com cortes de tela + voice-over)" },
+    { id: "s5t7", cat: "insta", txt: "Dia 27 (qui) · 0:30–1:00 — Posts 6 e 7 IG: recorte de valor + contagem regressiva 'faltam X dias'" },
+    { id: "s5t8", cat: "site", txt: "Dia 28 (sex) · 0:00–0:30 — Escrever página 'Diagnóstico Digital gratuito' (o que é, o que entrego, quem se inscreve)" },
+    { id: "s5t9", cat: "site", txt: "Dia 28 (sex) · 0:30–1:00 — Subir página no site (Carrd/Typedream — 2ª página); criar form separado 'leads quentes'" },
+  ]},
+  { id: "s6", titulo: "Semana 6 — Revisão + buffer", datas: "28 jul–1 ago · 5 dias", ini: "2026-07-28", fim: "2026-08-01", tarefas: [
+    { id: "s6t1", cat: "estrategia", txt: "Dia 29 (seg) · 0:00–0:30 — Reler todos os roteiros; ajustar o que destoa do posicionamento" },
+    { id: "s6t2", cat: "estrategia", txt: "Dia 29 (seg) · 0:30–1:00 — Checklist LGPD: garantir que nenhuma demo usa dado real de paciente" },
+    { id: "s6t3", cat: "site", txt: "Dia 30 (ter) · 0:00–1:00 — Escrever e subir página 'Sobre' (quem é Rosa, por que o projeto, manifesto de 1 parágrafo)" },
+    { id: "s6t4", cat: "insta", txt: "Dia 31 (qua) · 0:00–0:30 — Post 8 IG: carrossel mini-aula (autoridade) + Post 9 IG: bastidor" },
+    { id: "s6t5", cat: "insta", txt: "Dia 31 (qua) · 0:30–1:00 — Post 10 IG: lançamento oficial 'as aulas começam segunda'" },
+    { id: "s6t6", cat: "gravacao", txt: "Dia 32 (qui) · 0:00–1:00 — Ensaio geral do Ep1 com teleprompter; cronometrar; meta 8–10 min" },
+    { id: "s6t7", cat: "estrategia", txt: "Dia 33 (sex) · 0:00–1:00 — Dia de respiro: finalizar itens atrasados OU folga se não sobrou nada" },
+  ]},
+  { id: "s7", titulo: "Semana 7 — Pré-lançamento", datas: "2–3 ago · 2 dias", ini: "2026-08-02", fim: "2026-08-03", tarefas: [
+    { id: "s7t1", cat: "site", txt: "Dia 34 (sáb) · 0:00–0:30 — Testar site no celular (responsividade mobile)" },
+    { id: "s7t2", cat: "site", txt: "Dia 34 (sáb) · 0:30–1:00 — Conferir formulário enviando e-mail de verdade + Skill baixando" },
+    { id: "s7t3", cat: "estrategia", txt: "Dia 35 (dom) · 0:00–1:00 — Não tocar em nada. Descansar. O Dia 1 pede cabeça fresca." },
+  ]},
+];
+
+const CHK = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l5 5 9-11"/></svg>`;
+
+const KEY = "modo-ia-saude-plano-v11";
+let state = JSON.parse(localStorage.getItem(KEY) || "{}");
+const save = () => localStorage.setItem(KEY, JSON.stringify(state));
+
+// Inicializar estado com tarefas pré-marcadas como "feito" no cronograma
+plano.forEach(sem => {
+  sem.tarefas.forEach(t => {
+    if (t.feito && state[t.id] === undefined) state[t.id] = true;
+  });
+});
+save();
+
+// Tema
+const root = document.documentElement;
+document.getElementById("themeToggle").addEventListener("click", () => {
+  root.setAttribute("data-theme", root.getAttribute("data-theme") === "dark" ? "light" : "dark");
+});
+
+// Legenda com chips
+const legendEl = document.getElementById("legend");
+Object.values(cats).forEach(c => {
+  legendEl.innerHTML += `<span class="chip"><span class="dot" style="background:${c.cor}"></span>${c.nome}</span>`;
+});
+
+// Data
+const hoje = new Date();
+hoje.setHours(0, 0, 0, 0);
+const alvo = new Date("2026-08-03T00:00:00");
+const dias = Math.max(0, Math.ceil((alvo - hoje) / (1000 * 60 * 60 * 24)));
+document.getElementById("diasNum").textContent = dias;
+
+// Renderizar
+const weeksEl = document.getElementById("weeks");
+let total = 0;
+
+plano.forEach((sem, i) => {
+  total += sem.tarefas.length;
+  const ini = new Date(sem.ini + "T00:00:00");
+  const fim = new Date(sem.fim + "T23:59:59");
+  const isNow = hoje >= ini && hoje <= fim;
+
+  const weekEl = document.createElement("div");
+  weekEl.className = "week" + (isNow ? " current" : "");
+
+  weekEl.innerHTML = `
+    <div class="week-head">
+      <div class="week-num">${String(i).padStart(2, '0')}</div>
+      <div class="week-info">
+        <div class="week-title">${sem.titulo}</div>
+        <div class="week-dates">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2"/>
+            <path d="M16 2v4M8 2v4M3 10h18"/>
+          </svg>
+          ${sem.datas}
+        </div>
+      </div>
+      ${isNow ? '<span class="week-badge">Agora</span>' : ''}
+      <span class="week-score" data-prog="${sem.id}"></span>
+      <span class="week-chev">▾</span>
+    </div>
+    <div class="week-tasks">
+      ${sem.tarefas.map(t => {
+        const done = state[t.id] ? "done" : "";
+        const c = cats[t.cat];
+        return `<div class="task ${done}" data-task="${t.id}">
+          <div class="task-check ${state[t.id] ? "checked" : ""}" data-cb="${t.id}">${CHK}</div>
+          <div class="task-body">
+            <div class="task-text">${t.txt}</div>
+            <span class="task-tag" style="background:${c.cor}">${c.nome}</span>
+          </div>
+        </div>`;
+      }).join("")}
+    </div>
+  `;
+
+  weeksEl.appendChild(weekEl);
+
+  weekEl.querySelector(".week-head").addEventListener("click", e => {
+    if (e.target.closest(".task-check")) return;
+    weekEl.classList.toggle("collapsed");
+  });
+
+  weekEl.querySelectorAll(".task-check").forEach(cb => {
+    cb.addEventListener("click", () => {
+      toggle(cb.dataset.cb);
+      cb.classList.toggle("checked");
+    });
+  });
+
+  weekEl.querySelectorAll(".task-text").forEach(txt => {
+    txt.addEventListener("click", () => {
+      document.querySelector(`[data-cb="${txt.closest(".task").dataset.task}"]`).click();
+    });
+  });
+});
+
+function toggle(id) {
+  if (state[id]) delete state[id];
+  else state[id] = true;
+  save();
+  refresh();
+}
+
+function refresh() {
+  let feitas = 0;
+  plano.forEach(sem => {
+    let f = 0;
+    sem.tarefas.forEach(t => { if (state[t.id]) { f++; feitas++; } });
+    document.querySelector(`[data-prog="${sem.id}"]`).textContent = `${f}/${sem.tarefas.length}`;
+  });
+
+  const pct = total ? Math.round(feitas / total * 100) : 0;
+  document.getElementById("feitasNum").textContent = feitas;
+  document.getElementById("totalNum").textContent = total;
+  document.getElementById("pctNum").textContent = pct + "%";
+  document.getElementById("progressPct").textContent = pct + "%";
+  document.getElementById("barFill").style.width = pct + "%";
+}
+
+document.getElementById("expandAll").addEventListener("click", () => {
+  document.querySelectorAll(".week").forEach(w => w.classList.remove("collapsed"));
+});
+document.getElementById("collapseAll").addEventListener("click", () => {
+  document.querySelectorAll(".week").forEach(w => w.classList.add("collapsed"));
+});
+document.getElementById("resetBtn").addEventListener("click", () => {
+  if (confirm("Apagar todas as marcações?")) {
+    state = {};
+    save();
+    document.querySelectorAll(".task-check").forEach(cb => cb.classList.remove("checked"));
+    document.querySelectorAll(".task").forEach(t => t.classList.remove("done"));
+    refresh();
+  }
+});
+
+// Modal de Entregáveis
+const modalOverlay = document.getElementById("modalEntregaveis");
+
+document.querySelectorAll('[data-action="open-entregaveis"]').forEach(btn => {
+  btn.addEventListener("click", () => {
+    modalOverlay.classList.add("open");
+    modalOverlay.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  });
+});
+
+document.querySelectorAll('[data-action="close-modal"]').forEach(btn => {
+  btn.addEventListener("click", () => {
+    modalOverlay.classList.remove("open");
+    modalOverlay.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  });
+});
+
+// Fechar clicando fora
+modalOverlay.addEventListener("click", e => {
+  if (e.target === modalOverlay) {
+    modalOverlay.classList.remove("open");
+    modalOverlay.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+});
+
+// Fechar com ESC
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape" && modalOverlay.classList.contains("open")) {
+    modalOverlay.classList.remove("open");
+    modalOverlay.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+});
+
+// Intercepta cliques nos links placeholder (até Rosa mandar o link real)
+document.querySelectorAll(".modal-item-btn[data-href]").forEach(btn => {
+  btn.addEventListener("click", e => {
+    const key = btn.dataset.href;
+    if (btn.getAttribute("href") === "#") {
+      e.preventDefault();
+      const nome = key === "skill-slides" ? "Skill de Apresentações" : "Glossário";
+      alert(`Link do ${nome} ainda não foi configurado. Rosa vai colar o link aqui em breve!`);
+    }
+  });
+});
+
+// Carrossel de Roteiros
+(function() {
+  const track = document.getElementById("roteirosTrack");
+  const prevBtn = document.getElementById("carPrev");
+  const nextBtn = document.getElementById("carNext");
+  const dotsEl = document.getElementById("carDots");
+  if (!track || !prevBtn || !nextBtn) return;
+
+  const cards = track.querySelectorAll(".roteiro-card");
+  let current = 0;
+
+  function getVisibleCount() {
+    const w = window.innerWidth;
+    if (w <= 600) return 1;
+    if (w <= 900) return 2;
+    return 3;
+  }
+
+  function getMaxIndex() {
+    return Math.max(0, cards.length - getVisibleCount());
+  }
+
+  function buildDots() {
+    dotsEl.innerHTML = "";
+    const max = getMaxIndex() + 1;
+    for (let i = 0; i < max; i++) {
+      const dot = document.createElement("button");
+      dot.className = "carousel-dot" + (i === current ? " active" : "");
+      dot.setAttribute("aria-label", "Ir para slide " + (i + 1));
+      dot.addEventListener("click", () => goTo(i));
+      dotsEl.appendChild(dot);
+    }
+  }
+
+  function update() {
+    const card = cards[0];
+    if (!card) return;
+    const gap = 10;
+    const cardWidth = card.offsetWidth + gap;
+    track.style.transform = `translateX(-${current * cardWidth}px)`;
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current >= getMaxIndex();
+    dotsEl.querySelectorAll(".carousel-dot").forEach((d, i) => {
+      d.classList.toggle("active", i === current);
+    });
+  }
+
+  function goTo(i) {
+    current = Math.max(0, Math.min(i, getMaxIndex()));
+    update();
+  }
+
+  prevBtn.addEventListener("click", () => goTo(current - 1));
+  nextBtn.addEventListener("click", () => goTo(current + 1));
+
+  window.addEventListener("resize", () => {
+    if (current > getMaxIndex()) current = getMaxIndex();
+    buildDots();
+    update();
+  });
+
+  buildDots();
+  setTimeout(update, 50);
+})();
+
+refresh();
+</script>
+</body>
+</html>
