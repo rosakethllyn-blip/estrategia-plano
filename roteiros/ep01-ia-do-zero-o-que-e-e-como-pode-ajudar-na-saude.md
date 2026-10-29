@@ -41,7 +41,7 @@ formato: "professora na câmera + gravação de tela + slides"
 
 **FALA — ROSA:**
 
-> Antes de ir pra tela, deixa eu me apresentar. Meu nome é Rosa Kethllyn, sou enfermeira, trabalho com educação permanente e gestão na saúde e sou a criadora do Estrateg[IA].
+> Antes de ir pra tela, deixa eu me apresentar. Meu nome é Rosa Kethllyn, sou enfermeira, especialista em educação permanente e em criação com IA, e sou a criadora do Estrateg[IA].
 >
 > Eu conheço essa rotina de ter muita coisa acontecendo ao mesmo tempo. Treinamento pra organizar, material pra revisar, indicador pra acompanhar, reunião pra transformar em encaminhamento... E, às vezes, o dia termina e a gente sente que ficou só organizando demandas.
 >
