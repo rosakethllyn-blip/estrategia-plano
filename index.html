@@ -595,6 +595,12 @@
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
   }
+
+/* ESTRATEGIA_PATCH_2026_IA_ZERO — extensão dos botões, sem substituir o Design System */
+.roteiro-actions-novo{display:flex;flex-wrap:wrap;gap:7px;align-items:stretch}
+.roteiro-actions-novo .roteiro-btn{width:auto;min-width:0;height:auto;min-height:36px;flex:0 1 auto;display:inline-flex;justify-content:center;align-items:center;gap:5px;padding:8px 11px;font-size:12px;white-space:nowrap;text-decoration:none;border-radius:9px}
+.roteiro-actions-novo .roteiro-btn span{font-weight:650;letter-spacing:0}
+@media(max-width:600px){.roteiro-actions-novo .roteiro-btn{font-size:11px;padding:7px 9px}}
 </style>
 </head>
 <body class="g-root">
@@ -614,7 +620,7 @@
     <div class="hero-content">
       <p class="hero-eyebrow">Plano de Ação</p>
       <h1>Do preparo ao <span>lançamento</span></h1>
-      <p class="hero-sub">35 dias de preparação para chegar pronto ao grande dia. Um passo de cada vez.</p>
+      <p class="hero-sub">Uma temporada de 12 videoaulas para aprender IA do zero, com preparo, gravação e acompanhamento.</p>
       <div class="hero-deadline">
         <div class="hero-deadline-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -624,7 +630,7 @@
         </div>
         <div class="hero-deadline-text">
           <div class="hero-deadline-label">Data de Lançamento</div>
-          <div class="hero-deadline-date">03 de agosto de 2026</div>
+          <div class="hero-deadline-date">16 de novembro de 2026</div>
         </div>
       </div>
     </div>
@@ -636,8 +642,8 @@
   <div class="container">
     <div class="center" style="margin-bottom: 32px;">
       <p class="eyebrow">Entregáveis</p>
-      <h2 class="h2">Roteiros prontos</h2>
-      <p class="sub">Aqui estão os roteiros já escritos e validados, prontos pra gravar.</p>
+      <h2 class="h2">Aulas, roteiros e apresentações</h2>
+      <p class="sub">12 videoaulas planejadas, com roteiro, teleprompter, slides animados e materiais para baixar.</p>
     </div>
 
     <div class="folder-stack">
@@ -657,286 +663,163 @@
 
       <div class="roteiros-viewport">
         <div class="roteiros-track" id="roteirosTrack">
-          <!-- EP1 - Pronto -->
-          <div class="roteiro-card">
-            <span class="roteiro-badge">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12.5l5 5 9-11"/>
-              </svg>
-              Pronto
-            </span>
-            <h3 class="roteiro-titulo">Ep1 — Dominando o Claude Code</h3>
-            <p class="roteiro-desc">8 conceitos fundamentais pra gestores de saúde usarem IA de verdade (não só como chatbot).</p>
-            <div class="roteiro-meta">
-              <span class="roteiro-meta-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                ~20 min
-              </span>
-              <span class="roteiro-meta-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
-                .md
-              </span>
-              <span class="roteiro-meta-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                44 falas
-              </span>
-            </div>
-            <div class="roteiro-actions">
-              <a class="roteiro-btn roteiro-btn--primary" href="../../Conteudo/roteiros/ep01-roteiro-rosa-gravacao.md" download title="Baixar roteiro em Markdown">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
-                </svg>
-              </a>
-              <a class="roteiro-btn roteiro-btn--ghost" href="../../Conteudo/roteiros/ep01-roteiro-rosa-gravacao.md" target="_blank" title="Ver roteiro no navegador">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
-                </svg>
-              </a>
-              <button class="roteiro-btn roteiro-btn--ghost" data-action="open-entregaveis" type="button" title="Ver entregáveis prometidos">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 7h-9M14 17H5M17 20a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM9 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                </svg>
-              </button>
-            </div>
-          </div>
 
-          <!-- EP2 - Em breve -->
-          <div class="roteiro-card">
-            <span class="roteiro-badge em-breve">Em breve</span>
-            <h3 class="roteiro-titulo">Ep2 — Chatbot não é agente</h3>
-            <p class="roteiro-desc">Por que 90% dos gestores usam IA errada e como virar esse jogo com a Skill de Apresentações.</p>
-            <div class="roteiro-meta">
-              <span class="roteiro-meta-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                ~6–8 min
-              </span>
-              <span class="roteiro-meta-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
-                .md
-              </span>
-            </div>
-            <div class="roteiro-actions">
-              <button class="roteiro-btn roteiro-btn--primary" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
-                </svg>
-              </button>
-              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
-                </svg>
-              </button>
-              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 7h-9M14 17H5M17 20a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM9 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                </svg>
-              </button>
-            </div>
-          </div>
+  <!-- AULA 01 | Estrateg[IA]: IA do Zero -->
+  <div class="roteiro-card">
+    <span class="roteiro-badge">Aula 01 • 16/11/2026</span>
+    <h3 class="roteiro-titulo">IA do zero: o que é e como pode ajudar na saúde?</h3>
+    <p class="roteiro-desc">Fundamentos, possibilidades e limites · 14–18 min</p>
+    <div class="roteiro-actions roteiro-actions-novo">
+      <a class="roteiro-btn roteiro-btn--primary" href="roteiros/ep01-ia-do-zero-o-que-e-e-como-pode-ajudar-na-saude.md" download title="Baixar o roteiro da aula 01">↓ <span>Roteiro</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="teleprompter/ep01.html" target="_blank" rel="noopener" title="Abrir teleprompter da aula 01">▶ <span>Teleprompter</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="slides/ep01.html" target="_blank" rel="noopener" title="Abrir os slides da aula 01">▣ <span>Slides</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="materiais/mapa-primeiros-usos.md" download title="Baixar material de apoio da aula 01">↧ <span>Apoio</span></a>
+    </div>
+  </div>
 
-          <!-- EP3 - Em breve -->
-          <div class="roteiro-card">
-            <span class="roteiro-badge em-breve">Em breve</span>
-            <h3 class="roteiro-titulo">Ep3 — Ata → 5W2H com IA</h3>
-            <p class="roteiro-desc">Tutorial passo a passo: como usar o Claude Code pra transformar ata de reunião em plano de ação.</p>
-            <div class="roteiro-meta">
-              <span class="roteiro-meta-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                ~8–10 min
-              </span>
-              <span class="roteiro-meta-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
-                .md
-              </span>
-            </div>
-            <div class="roteiro-actions">
-              <button class="roteiro-btn roteiro-btn--primary" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
-                </svg>
-              </button>
-              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
-                </svg>
-              </button>
-              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 7h-9M14 17H5M17 20a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM9 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                </svg>
-              </button>
-            </div>
-          </div>
+  <!-- AULA 02 | Estrateg[IA]: IA do Zero -->
+  <div class="roteiro-card">
+    <span class="roteiro-badge">Aula 02 • 23/11/2026</span>
+    <h3 class="roteiro-titulo">ChatGPT do zero: conheça a ferramenta e faça seu primeiro pedido</h3>
+    <p class="roteiro-desc">Interface, conversas e primeiros comandos · 14–18 min</p>
+    <div class="roteiro-actions roteiro-actions-novo">
+      <a class="roteiro-btn roteiro-btn--primary" href="roteiros/ep02-chatgpt-do-zero-conheca-a-ferramenta-e-faca-seu-primeir.md" download title="Baixar o roteiro da aula 02">↓ <span>Roteiro</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="teleprompter/ep02.html" target="_blank" rel="noopener" title="Abrir teleprompter da aula 02">▶ <span>Teleprompter</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="slides/ep02.html" target="_blank" rel="noopener" title="Abrir os slides da aula 02">▣ <span>Slides</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="materiais/primeiro-pedido.md" download title="Baixar material de apoio da aula 02">↧ <span>Apoio</span></a>
+    </div>
+  </div>
 
-          <!-- EP4 - Em breve -->
-          <div class="roteiro-card">
-            <span class="roteiro-badge em-breve">Em breve</span>
-            <h3 class="roteiro-titulo">Ep4 — Instalando o Claude Code</h3>
-            <p class="roteiro-desc">Passo a passo: como instalar o Claude Code no seu computador do zero, sem medo do terminal.</p>
-            <div class="roteiro-meta">
-              <span class="roteiro-meta-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                ~7–9 min
-              </span>
-              <span class="roteiro-meta-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
-                .md
-              </span>
-            </div>
-            <div class="roteiro-actions">
-              <button class="roteiro-btn roteiro-btn--primary" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
-                </svg>
-              </button>
-              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
-                </svg>
-              </button>
-              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 7h-9M14 17H5M17 20a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM9 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                </svg>
-              </button>
-            </div>
-          </div>
+  <!-- AULA 03 | Estrateg[IA]: IA do Zero -->
+  <div class="roteiro-card">
+    <span class="roteiro-badge">Aula 03 • 30/11/2026</span>
+    <h3 class="roteiro-titulo">Prompts do zero: como pedir à IA o que você realmente precisa</h3>
+    <p class="roteiro-desc">Contexto, objetivo, formato e restrições · 16–20 min</p>
+    <div class="roteiro-actions roteiro-actions-novo">
+      <a class="roteiro-btn roteiro-btn--primary" href="roteiros/ep03-prompts-do-zero-como-pedir-ia-o-que-voce-realmente-prec.md" download title="Baixar o roteiro da aula 03">↓ <span>Roteiro</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="teleprompter/ep03.html" target="_blank" rel="noopener" title="Abrir teleprompter da aula 03">▶ <span>Teleprompter</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="slides/ep03.html" target="_blank" rel="noopener" title="Abrir os slides da aula 03">▣ <span>Slides</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="materiais/modelo-de-prompt.md" download title="Baixar material de apoio da aula 03">↧ <span>Apoio</span></a>
+    </div>
+  </div>
 
-          <!-- EP5 - Em breve -->
-          <div class="roteiro-card">
-            <span class="roteiro-badge em-breve">Em breve</span>
-            <h3 class="roteiro-titulo">Ep5 — Primeiro CLAUDE.md</h3>
-            <p class="roteiro-desc">Como montar a memória do seu projeto: o primeiro CLAUDE.md do seu hospital ou setor.</p>
-            <div class="roteiro-meta">
-              <span class="roteiro-meta-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                ~8–10 min
-              </span>
-              <span class="roteiro-meta-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
-                .md
-              </span>
-            </div>
-            <div class="roteiro-actions">
-              <button class="roteiro-btn roteiro-btn--primary" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
-                </svg>
-              </button>
-              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
-                </svg>
-              </button>
-              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 7h-9M14 17H5M17 20a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM9 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                </svg>
-              </button>
-            </div>
-          </div>
+  <!-- AULA 04 | Estrateg[IA]: IA do Zero -->
+  <div class="roteiro-card">
+    <span class="roteiro-badge">Aula 04 • 07/12/2026</span>
+    <h3 class="roteiro-titulo">A IA pode errar: fontes, privacidade e segurança na saúde</h3>
+    <p class="roteiro-desc">Alucinações, validação e LGPD · 16–20 min</p>
+    <div class="roteiro-actions roteiro-actions-novo">
+      <a class="roteiro-btn roteiro-btn--primary" href="roteiros/ep04-a-ia-pode-errar-fontes-privacidade-e-seguranca-na-saude.md" download title="Baixar o roteiro da aula 04">↓ <span>Roteiro</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="teleprompter/ep04.html" target="_blank" rel="noopener" title="Abrir teleprompter da aula 04">▶ <span>Teleprompter</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="slides/ep04.html" target="_blank" rel="noopener" title="Abrir os slides da aula 04">▣ <span>Slides</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="materiais/checklist-uso-responsavel.md" download title="Baixar material de apoio da aula 04">↧ <span>Apoio</span></a>
+    </div>
+  </div>
 
-          <!-- EP6 - Em breve -->
-          <div class="roteiro-card">
-            <span class="roteiro-badge em-breve">Em breve</span>
-            <h3 class="roteiro-titulo">Ep6 — Sua primeira Skill</h3>
-            <p class="roteiro-desc">Criando uma skill POP de auditoria de prontuário que a IA executa sozinha.</p>
-            <div class="roteiro-meta">
-              <span class="roteiro-meta-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                ~10 min
-              </span>
-              <span class="roteiro-meta-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
-                .md
-              </span>
-            </div>
-            <div class="roteiro-actions">
-              <button class="roteiro-btn roteiro-btn--primary" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
-                </svg>
-              </button>
-              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
-                </svg>
-              </button>
-              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 7h-9M14 17H5M17 20a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM9 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                </svg>
-              </button>
-            </div>
-          </div>
+  <!-- AULA 05 | Estrateg[IA]: IA do Zero -->
+  <div class="roteiro-card">
+    <span class="roteiro-badge">Aula 05 • 14/12/2026</span>
+    <h3 class="roteiro-titulo">Ganhe tempo com IA: comunicados, checklists e atas</h3>
+    <p class="roteiro-desc">Três usos imediatos para coordenadores · 14–18 min</p>
+    <div class="roteiro-actions roteiro-actions-novo">
+      <a class="roteiro-btn roteiro-btn--primary" href="roteiros/ep05-ganhe-tempo-com-ia-comunicados-checklists-e-atas.md" download title="Baixar o roteiro da aula 05">↓ <span>Roteiro</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="teleprompter/ep05.html" target="_blank" rel="noopener" title="Abrir teleprompter da aula 05">▶ <span>Teleprompter</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="slides/ep05.html" target="_blank" rel="noopener" title="Abrir os slides da aula 05">▣ <span>Slides</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="materiais/ata-ficticia.md" download title="Baixar material de apoio da aula 05">↧ <span>Apoio</span></a>
+    </div>
+  </div>
 
-          <!-- EP7 - Em breve -->
-          <div class="roteiro-card">
-            <span class="roteiro-badge em-breve">Em breve</span>
-            <h3 class="roteiro-titulo">Ep7 — Conectando com MCP</h3>
-            <p class="roteiro-desc">Conectando o Claude Code às planilhas, formulários e sistemas do seu hospital.</p>
-            <div class="roteiro-meta">
-              <span class="roteiro-meta-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                ~9–11 min
-              </span>
-              <span class="roteiro-meta-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
-                .md
-              </span>
-            </div>
-            <div class="roteiro-actions">
-              <button class="roteiro-btn roteiro-btn--primary" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
-                </svg>
-              </button>
-              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
-                </svg>
-              </button>
-              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 7h-9M14 17H5M17 20a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM9 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                </svg>
-              </button>
-            </div>
-          </div>
+  <!-- AULA 06 | Estrateg[IA]: IA do Zero -->
+  <div class="roteiro-card">
+    <span class="roteiro-badge">Aula 06 • 21/12/2026</span>
+    <h3 class="roteiro-titulo">Como trabalhar com documentos e arquivos usando IA</h3>
+    <p class="roteiro-desc">Resumir, comparar e organizar documentos · 15–19 min</p>
+    <div class="roteiro-actions roteiro-actions-novo">
+      <a class="roteiro-btn roteiro-btn--primary" href="roteiros/ep06-como-trabalhar-com-documentos-e-arquivos-usando-ia.md" download title="Baixar o roteiro da aula 06">↓ <span>Roteiro</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="teleprompter/ep06.html" target="_blank" rel="noopener" title="Abrir teleprompter da aula 06">▶ <span>Teleprompter</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="slides/ep06.html" target="_blank" rel="noopener" title="Abrir os slides da aula 06">▣ <span>Slides</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="materiais/procedimentos-ficticios.md" download title="Baixar material de apoio da aula 06">↧ <span>Apoio</span></a>
+    </div>
+  </div>
 
-          <!-- EP8 - Em breve -->
-          <div class="roteiro-card">
-            <span class="roteiro-badge em-breve">Em breve</span>
-            <h3 class="roteiro-titulo">Ep8 — Sub-agents na prática</h3>
-            <p class="roteiro-desc">Montando sua equipe multidisciplinar de IAs: auditor, gerador de relatório e revisor.</p>
-            <div class="roteiro-meta">
-              <span class="roteiro-meta-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                ~12 min
-              </span>
-              <span class="roteiro-meta-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
-                .md
-              </span>
-            </div>
-            <div class="roteiro-actions">
-              <button class="roteiro-btn roteiro-btn--primary" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
-                </svg>
-              </button>
-              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
-                </svg>
-              </button>
-              <button class="roteiro-btn roteiro-btn--ghost" disabled title="Em produção" style="opacity:.4;cursor:not-allowed;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M20 7h-9M14 17H5M17 20a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM9 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                </svg>
-              </button>
-            </div>
-          </div>
+  <!-- AULA 07 | Estrateg[IA]: IA do Zero -->
+  <div class="roteiro-card">
+    <span class="roteiro-badge">Aula 07 • 04/01/2027</span>
+    <h3 class="roteiro-titulo">Planilhas e indicadores com IA: análise para iniciantes</h3>
+    <p class="roteiro-desc">Do CSV fictício aos primeiros insights · 18–22 min</p>
+    <div class="roteiro-actions roteiro-actions-novo">
+      <a class="roteiro-btn roteiro-btn--primary" href="roteiros/ep07-planilhas-e-indicadores-com-ia-analise-para-iniciantes.md" download title="Baixar o roteiro da aula 07">↓ <span>Roteiro</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="teleprompter/ep07.html" target="_blank" rel="noopener" title="Abrir teleprompter da aula 07">▶ <span>Teleprompter</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="slides/ep07.html" target="_blank" rel="noopener" title="Abrir os slides da aula 07">▣ <span>Slides</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="materiais/indicadores-ficticios.csv" download title="Baixar material de apoio da aula 07">↧ <span>Apoio</span></a>
+    </div>
+  </div>
+
+  <!-- AULA 08 | Estrateg[IA]: IA do Zero -->
+  <div class="roteiro-card">
+    <span class="roteiro-badge">Aula 08 • 11/01/2027</span>
+    <h3 class="roteiro-titulo">Crie uma aula e slides com ajuda da IA</h3>
+    <p class="roteiro-desc">Da pauta ao plano de aula · 17–21 min</p>
+    <div class="roteiro-actions roteiro-actions-novo">
+      <a class="roteiro-btn roteiro-btn--primary" href="roteiros/ep08-crie-uma-aula-e-slides-com-ajuda-da-ia.md" download title="Baixar o roteiro da aula 08">↓ <span>Roteiro</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="teleprompter/ep08.html" target="_blank" rel="noopener" title="Abrir teleprompter da aula 08">▶ <span>Teleprompter</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="slides/ep08.html" target="_blank" rel="noopener" title="Abrir os slides da aula 08">▣ <span>Slides</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="materiais/modelo-plano-de-aula.md" download title="Baixar material de apoio da aula 08">↧ <span>Apoio</span></a>
+    </div>
+  </div>
+
+  <!-- AULA 09 | Estrateg[IA]: IA do Zero -->
+  <div class="roteiro-card">
+    <span class="roteiro-badge">Aula 09 • 18/01/2027</span>
+    <h3 class="roteiro-titulo">Pesquise melhor com IA: encontre fontes e confira respostas</h3>
+    <p class="roteiro-desc">Perguntas, fontes primárias e leitura crítica · 15–19 min</p>
+    <div class="roteiro-actions roteiro-actions-novo">
+      <a class="roteiro-btn roteiro-btn--primary" href="roteiros/ep09-pesquise-melhor-com-ia-encontre-fontes-e-confira-respos.md" download title="Baixar o roteiro da aula 09">↓ <span>Roteiro</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="teleprompter/ep09.html" target="_blank" rel="noopener" title="Abrir teleprompter da aula 09">▶ <span>Teleprompter</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="slides/ep09.html" target="_blank" rel="noopener" title="Abrir os slides da aula 09">▣ <span>Slides</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="materiais/ficha-checagem-fontes.md" download title="Baixar material de apoio da aula 09">↧ <span>Apoio</span></a>
+    </div>
+  </div>
+
+  <!-- AULA 10 | Estrateg[IA]: IA do Zero -->
+  <div class="roteiro-card">
+    <span class="roteiro-badge">Aula 10 • 25/01/2027</span>
+    <h3 class="roteiro-titulo">Organize projetos e contexto para não começar do zero</h3>
+    <p class="roteiro-desc">Instruções reutilizáveis e biblioteca de trabalho · 15–19 min</p>
+    <div class="roteiro-actions roteiro-actions-novo">
+      <a class="roteiro-btn roteiro-btn--primary" href="roteiros/ep10-organize-projetos-e-contexto-para-nao-comecar-do-zero.md" download title="Baixar o roteiro da aula 10">↓ <span>Roteiro</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="teleprompter/ep10.html" target="_blank" rel="noopener" title="Abrir teleprompter da aula 10">▶ <span>Teleprompter</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="slides/ep10.html" target="_blank" rel="noopener" title="Abrir os slides da aula 10">▣ <span>Slides</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="materiais/contexto-projeto-ficticio.md" download title="Baixar material de apoio da aula 10">↧ <span>Apoio</span></a>
+    </div>
+  </div>
+
+  <!-- AULA 11 | Estrateg[IA]: IA do Zero -->
+  <div class="roteiro-card">
+    <span class="roteiro-badge">Aula 11 • 01/02/2027</span>
+    <h3 class="roteiro-titulo">ChatGPT, Claude e outras IAs: qual usar?</h3>
+    <p class="roteiro-desc">Comparação por tarefas, não por torcida · 16–20 min</p>
+    <div class="roteiro-actions roteiro-actions-novo">
+      <a class="roteiro-btn roteiro-btn--primary" href="roteiros/ep11-chatgpt-claude-e-outras-ias-qual-usar.md" download title="Baixar o roteiro da aula 11">↓ <span>Roteiro</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="teleprompter/ep11.html" target="_blank" rel="noopener" title="Abrir teleprompter da aula 11">▶ <span>Teleprompter</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="slides/ep11.html" target="_blank" rel="noopener" title="Abrir os slides da aula 11">▣ <span>Slides</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="materiais/matriz-de-ferramentas.md" download title="Baixar material de apoio da aula 11">↧ <span>Apoio</span></a>
+    </div>
+  </div>
+
+  <!-- AULA 12 | Estrateg[IA]: IA do Zero -->
+  <div class="roteiro-card">
+    <span class="roteiro-badge">Aula 12 • 08/02/2027</span>
+    <h3 class="roteiro-titulo">De conversa a processo: seu primeiro fluxo com agente de IA</h3>
+    <p class="roteiro-desc">Entenda agentes, limites e próximos passos · 18–22 min</p>
+    <div class="roteiro-actions roteiro-actions-novo">
+      <a class="roteiro-btn roteiro-btn--primary" href="roteiros/ep12-de-conversa-a-processo-seu-primeiro-fluxo-com-agente-de.md" download title="Baixar o roteiro da aula 12">↓ <span>Roteiro</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="teleprompter/ep12.html" target="_blank" rel="noopener" title="Abrir teleprompter da aula 12">▶ <span>Teleprompter</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="slides/ep12.html" target="_blank" rel="noopener" title="Abrir os slides da aula 12">▣ <span>Slides</span></a>
+      <a class="roteiro-btn roteiro-btn--ghost" href="materiais/mapa-fluxo-agente.md" download title="Baixar material de apoio da aula 12">↧ <span>Apoio</span></a>
+    </div>
+  </div>
+
         </div>
       </div>
 
@@ -958,7 +841,7 @@
     <div class="center" style="margin-bottom: 32px;">
       <p class="eyebrow">Visão geral</p>
       <h2 class="h2">Onde você está hoje</h2>
-      <p class="sub">Acompanhe seu progresso até o dia do lançamento.</p>
+      <p class="sub">Marque cada etapa da produção, da gravação e da publicação da temporada.</p>
     </div>
 
     <div class="stats">
@@ -1038,7 +921,7 @@
     </div>
     <div class="modal-body">
       <div class="modal-quote">
-        "Se você se inscreveu agora, vai receber nos próximos dias a Skill de Apresentações Profissionais — uma habilidade que eu mesma criei pra você gerar slides de treinamento e reuniões em segundos, sem precisar formatar nada."
+        "Se você se inscreveu agora, vai receber nos próximos dias a Mapa de primeiros usos da IA — uma habilidade que eu mesma criei pra você gerar slides de treinamento e reuniões em segundos, sem precisar formatar nada."
       </div>
 
       <div class="modal-list">
@@ -1051,10 +934,10 @@
             </svg>
           </div>
           <div class="modal-item-info">
-            <p class="modal-item-titulo">Skill de Apresentações Profissionais</p>
-            <p class="modal-item-desc">Gera slides profissionais de treinamento e reuniões em segundos.</p>
+            <p class="modal-item-titulo">Mapa de primeiros usos da IA</p>
+            <p class="modal-item-desc">Ideias iniciais para aplicar IA na gestão da saúde.</p>
           </div>
-          <a class="modal-item-btn" href="#" data-href="skill-slides">
+          <a class="modal-item-btn" href="materiais/mapa-primeiros-usos.md" download>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
             </svg>
@@ -1073,7 +956,7 @@
             <p class="modal-item-titulo">Glossário — 8 Conceitos</p>
             <p class="modal-item-desc">Cada termo explicado: loop agêntico, CLAUDE.md, skills, MCPs e mais.</p>
           </div>
-          <a class="modal-item-btn" href="#" data-href="glossario" style="background:#4A9CB5;">
+          <a class="modal-item-btn" href="https://rosakethllyn-blip.github.io/modo-ia-saude-glossario/" target="_blank" rel="noopener" style="background:#4A9CB5;">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
             </svg>
@@ -1082,7 +965,7 @@
         </div>
       </div>
 
-      <p class="modal-footer-note">Os links serão adicionados pela Rosa em breve.</p>
+      <p class="modal-footer-note">Os links atualizados estão nos cards de cada aula.</p>
     </div>
   </div>
 </div>
@@ -1090,9 +973,9 @@
 <!-- Launch -->
 <section class="launch">
   <div class="launch-content">
-    <div class="launch-date">03 de agosto · segunda-feira</div>
-    <h2>Dia 1 — Gravar e publicar</h2>
-    <p>Ep1 gravado + post de lançamento no Instagram + post no LinkedIn. A partir daqui, cadência.</p>
+    <div class="launch-date">16 de novembro · segunda-feira</div>
+    <h2>Estreia — Primeira videoaula</h2>
+    <p>EP01 no YouTube, teleprompter e slides HTML disponíveis para gravação. A partir daqui, uma aula por semana.</p>
   </div>
 </section>
 
@@ -1110,88 +993,607 @@ const cats = {
 };
 
 const plano = [
-  { id: "s0", titulo: "Semana 0 — Fundação", datas: "18–20 jun · 3 dias", ini: "2026-06-18", fim: "2026-06-20", tarefas: [
-    { id: "s0t1", cat: "estrategia", txt: "Dia 1 (qua) · 0:00–0:20 — Reler Estratégia; marcar cunha: Enfermagem, NEP, CCIH, NSP, Qualidade", feito: true },
-    { id: "s0t2", cat: "estrategia", txt: "Dia 1 (qua) · 0:20–0:40 — Reler Plano-90-dias inteiro; sublinhar o que já depende de você" },
-    { id: "s0t3", cat: "marca", txt: "Dia 1 (qua) · 0:40–1:00 — Escrever bio definitiva do LinkedIn e salvar em bio-final.md", feito: true },
-    { id: "s0t4", cat: "marca", txt: "Dia 2 (qui) · 0:00–0:30 — Abrir projeto gesti; listar o que dá pra reaproveitar (logo, paleta, mascote)" },
-    { id: "s0t5", cat: "marca", txt: "Dia 2 (qui) · 0:30–1:00 — Exportar Gesti v1 estática (pose parada + acenando) em PNG", feito: true },
-    { id: "s0t6", cat: "site", txt: "Dia 3 (sex) · 0:00–0:30 — Escolher ferramenta de captura: Brevo (recomendado, grátis até 300 contatos)" },
-    { id: "s0t7", cat: "site", txt: "Dia 3 (sex) · 0:30–1:00 — Criar conta Brevo + lista 'Modo IA Saúde — Gestores'; copiar ID da lista" },
-  ]},
-  { id: "s1", titulo: "Semana 1 — Ep1 escrito + identidade", datas: "23–27 jun · 5 dias", ini: "2026-06-23", fim: "2026-06-27", tarefas: [
-    { id: "s1t1", cat: "ep", txt: "Dia 4 (seg) · 0:00–0:30 — Ler Temporada-1.md e copiar resumo do Ep1", feito: true },
-    { id: "s1t2", cat: "ep", txt: "Dia 4 (seg) · 0:30–1:00 — Escrever abertura (60s): gancho + promessa do Ep1", feito: true },
-    { id: "s1t3", cat: "ep", txt: "Dia 5 (ter) · 0:00–0:40 — Escrever passo a passo da demo 'skill de apresentações → slides gerados'", feito: true },
-    { id: "s1t4", cat: "ep", txt: "Dia 5 (ter) · 0:40–1:00 — Escrever CTA final do Ep1 (baixe o checklist + entre na lista)", feito: true },
-    { id: "s1t5", cat: "marca", txt: "Dia 6 (qua) · 0:00–0:30 — Fechar logo simples do Modo IA Saúde; exportar SVG + PNG" },
-    { id: "s1t6", cat: "marca", txt: "Dia 6 (qua) · 0:30–1:00 — Documentar paleta hex + fonte oficial em identidade-final.md" },
-    { id: "s1t7", cat: "ep", txt: "Dia 7 (qui) · 0:00–1:00 — Leitura em voz alta do roteiro; cortar excessos; marcar tempos por bloco", feito: true },
-    { id: "s1t8", cat: "entregavel", txt: "Dia 8 (sex) · 0:00–1:00 — Escrever checklist '10 rotinas dos núcleos de gestão que a IA já resolve hoje'" },
-  ]},
-  { id: "s2", titulo: "Semana 2 — Site + perfis prontos", datas: "30 jun–4 jul · 5 dias", ini: "2026-06-30", fim: "2026-07-04", tarefas: [
-    { id: "s2t1", cat: "insta", txt: "Dia 9 (seg) · 0:00–0:30 — LinkedIn: headline nova + URL personalizada linkedin.com/in/rosakethllyn + foto coerente" },
-    { id: "s2t2", cat: "insta", txt: "Dia 9 (seg) · 0:30–1:00 — Escrever 1º post LinkedIn (reaproveita abertura do Ep1 sem revelar vídeo); publicar" },
-    { id: "s2t3", cat: "site", txt: "Dia 10 (ter) · 0:00–0:40 — Criar landing page simples em Carrd/Typedream (headline, subhead, form, botão)" },
-    { id: "s2t4", cat: "site", txt: "Dia 10 (ter) · 0:40–1:00 — Conectar formulário à lista do Brevo; testar envio pro e-mail pessoal" },
-    { id: "s2t5", cat: "entregavel", txt: "Dia 11 (qua) · 0:00–0:30 — Pegar skill-apresentacoes.md e colar no Canva (template de e-book)" },
-    { id: "s2t6", cat: "entregavel", txt: "Dia 11 (qua) · 0:30–1:00 — Aplicar paleta + logo + Gesti; exportar PDF; salvar em skill-apresentacoes.pdf" },
-    { id: "s2t7", cat: "site", txt: "Dia 12 (qui) · 0:00–0:40 — Subir PDF no Drive com link público; colar no botão 'Baixar Skill' da landing" },
-    { id: "s2t8", cat: "site", txt: "Dia 12 (qui) · 0:40–1:00 — Disparar e-mail automático via Brevo confirmando link da Skill; testar fluxo" },
-    { id: "s2t9", cat: "insta", txt: "Dia 13 (sex) · 0:00–0:30 — Instagram: nome 'Rosa Kethllyn · IA na Gestão da Saúde' + bio + foto" },
-    { id: "s2t10", cat: "insta", txt: "Dia 13 (sex) · 0:30–1:00 — Criar templates de post no Canva (capa + card interno); salvar como template" },
-  ]},
-  { id: "s3", titulo: "Semana 3 — Conteúdo + Ep2/Ep3", datas: "7–11 jul · 5 dias", ini: "2026-07-07", fim: "2026-07-11", tarefas: [
-    { id: "s3t1", cat: "insta", txt: "Dia 14 (seg) · 0:00–0:30 — Post 1 IG: apresentação (quem é você e pra quem é o perfil)" },
-    { id: "s3t2", cat: "insta", txt: "Dia 14 (seg) · 0:30–1:00 — Post 2 IG: apresenta a Gesti (mascote)" },
-    { id: "s3t3", cat: "ep", txt: "Dia 15 (ter) · 0:00–0:30 — Copiar resumo do Ep2 ('Chatbot não é agente') do Temporada-1.md" },
-    { id: "s3t4", cat: "ep", txt: "Dia 15 (ter) · 0:30–1:00 — Escrever abertura (60s) + 2 exemplos contrastantes (amador x processo)" },
-    { id: "s3t5", cat: "insta", txt: "Dia 16 (qua) · 0:00–0:30 — Post 3 IG: a dor 'gestão da saúde no improviso'" },
-    { id: "s3t6", cat: "insta", txt: "Dia 16 (qua) · 0:30–1:00 — Post LinkedIn #2: recorte da dor do gestor (texto curto, sem link)" },
-    { id: "s3t7", cat: "ep", txt: "Dia 17 (qui) · 0:00–1:00 — Escrever roteiro do Ep3 ('Slides profissionais com IA'), aproveitando a skill já criada" },
-    { id: "s3t8", cat: "gravacao", txt: "Dia 18 (sex) · 0:00–0:40 — Testar câmera + mic de lapela + iluminação (luminária virada pra parede); gravar teste 2min" },
-    { id: "s3t9", cat: "gravacao", txt: "Dia 18 (sex) · 0:40–1:00 — Ouvir teste; anotar 3 ajustes; salvar em setup-notas.md" },
-  ]},
-  { id: "s4", titulo: "Semana 4 — Ep1 e Ep2 gravados", datas: "14–18 jul · 5 dias", ini: "2026-07-14", fim: "2026-07-18", tarefas: [
-    { id: "s4t1", cat: "gravacao", txt: "Dia 19 (seg) · 0:00–0:20 — Ensaio rápido: ler roteiro do Ep1 em voz alta 1 vez" },
-    { id: "s4t2", cat: "gravacao", txt: "Dia 19 (seg) · 0:20–1:00 — Gravar da abertura até o fim da demo (várias takes, não precisa ser perfeito)" },
-    { id: "s4t3", cat: "gravacao", txt: "Dia 20 (ter) · 0:00–1:00 — Gravar CTA + 1 take de encerramento; escolher os melhores cortes" },
-    { id: "s4t4", cat: "gravacao", txt: "Dia 21 (qua) · 0:00–1:00 — Editar Ep1 no CapCut: cortes, legendas automáticas, thumbnail com a Gesti; exportar MP4" },
-    { id: "s4t5", cat: "gravacao", txt: "Dia 22 (qui) · 0:00–0:20 — Ensaio Ep2" },
-    { id: "s4t6", cat: "gravacao", txt: "Dia 22 (qui) · 0:20–1:00 — Gravar Ep2 inteiro (conceitual, fica em 6–8 min)" },
-    { id: "s4t7", cat: "gravacao", txt: "Dia 23 (sex) · 0:00–0:30 — Editar Ep2 no CapCut (mais simples, sem demo)" },
-    { id: "s4t8", cat: "insta", txt: "Dia 23 (sex) · 0:30–1:00 — Posts 4 e 5 IG: dica prática + bastidor 'vem aí o canal'" },
-  ]},
-  { id: "s5", titulo: "Semana 5 — YouTube + Ep3", datas: "21–25 jul · 5 dias", ini: "2026-07-21", fim: "2026-07-25", tarefas: [
-    { id: "s5t1", cat: "marca", txt: "Dia 24 (seg) · 0:00–0:30 — Criar canal YouTube 'Modo IA Saúde'; capa (1130x640) + template de thumbnail" },
-    { id: "s5t2", cat: "marca", txt: "Dia 24 (seg) · 0:30–1:00 — Escrever descrição fixa do canal + about (não publicar ainda)" },
-    { id: "s5t3", cat: "marca", txt: "Dia 25 (ter) · 0:00–1:00 — Criar vinheta curta (5s abertura + 5s encerramento) com Gesti + música do CapCut" },
-    { id: "s5t4", cat: "gravacao", txt: "Dia 26 (qua) · 0:00–0:20 — Ensaio Ep3" },
-    { id: "s5t5", cat: "gravacao", txt: "Dia 26 (qua) · 0:20–1:00 — Gravar Ep3 (mostrando tela do Claude com skill de apresentações)" },
-    { id: "s5t6", cat: "gravacao", txt: "Dia 27 (qui) · 0:00–0:30 — Editar Ep3 (com cortes de tela + voice-over)" },
-    { id: "s5t7", cat: "insta", txt: "Dia 27 (qui) · 0:30–1:00 — Posts 6 e 7 IG: recorte de valor + contagem regressiva 'faltam X dias'" },
-    { id: "s5t8", cat: "site", txt: "Dia 28 (sex) · 0:00–0:30 — Escrever página 'Diagnóstico Digital gratuito' (o que é, o que entrego, quem se inscreve)" },
-    { id: "s5t9", cat: "site", txt: "Dia 28 (sex) · 0:30–1:00 — Subir página no site (Carrd/Typedream — 2ª página); criar form separado 'leads quentes'" },
-  ]},
-  { id: "s6", titulo: "Semana 6 — Revisão + buffer", datas: "28 jul–1 ago · 5 dias", ini: "2026-07-28", fim: "2026-08-01", tarefas: [
-    { id: "s6t1", cat: "estrategia", txt: "Dia 29 (seg) · 0:00–0:30 — Reler todos os roteiros; ajustar o que destoa do posicionamento" },
-    { id: "s6t2", cat: "estrategia", txt: "Dia 29 (seg) · 0:30–1:00 — Checklist LGPD: garantir que nenhuma demo usa dado real de paciente" },
-    { id: "s6t3", cat: "site", txt: "Dia 30 (ter) · 0:00–1:00 — Escrever e subir página 'Sobre' (quem é Rosa, por que o projeto, manifesto de 1 parágrafo)" },
-    { id: "s6t4", cat: "insta", txt: "Dia 31 (qua) · 0:00–0:30 — Post 8 IG: carrossel mini-aula (autoridade) + Post 9 IG: bastidor" },
-    { id: "s6t5", cat: "insta", txt: "Dia 31 (qua) · 0:30–1:00 — Post 10 IG: lançamento oficial 'as aulas começam segunda'" },
-    { id: "s6t6", cat: "gravacao", txt: "Dia 32 (qui) · 0:00–1:00 — Ensaio geral do Ep1 com teleprompter; cronometrar; meta 8–10 min" },
-    { id: "s6t7", cat: "estrategia", txt: "Dia 33 (sex) · 0:00–1:00 — Dia de respiro: finalizar itens atrasados OU folga se não sobrou nada" },
-  ]},
-  { id: "s7", titulo: "Semana 7 — Pré-lançamento", datas: "2–3 ago · 2 dias", ini: "2026-08-02", fim: "2026-08-03", tarefas: [
-    { id: "s7t1", cat: "site", txt: "Dia 34 (sáb) · 0:00–0:30 — Testar site no celular (responsividade mobile)" },
-    { id: "s7t2", cat: "site", txt: "Dia 34 (sáb) · 0:30–1:00 — Conferir formulário enviando e-mail de verdade + Skill baixando" },
-    { id: "s7t3", cat: "estrategia", txt: "Dia 35 (dom) · 0:00–1:00 — Não tocar em nada. Descansar. O Dia 1 pede cabeça fresca." },
-  ]},
+  {
+    "id": "pre1",
+    "titulo": "Pré-produção — Preparar conteúdo e estúdio",
+    "datas": "29/10–08/11",
+    "ini": "2026-10-29",
+    "fim": "2026-11-08",
+    "tarefas": [
+      {
+        "id": "pre1t1",
+        "cat": "ep",
+        "txt": "Revisar as falas, a demonstração e o roteiro completo do EP01"
+      },
+      {
+        "id": "pre1t2",
+        "cat": "marca",
+        "txt": "Preparar cenário, iluminação, câmera e captação de áudio"
+      },
+      {
+        "id": "pre1t3",
+        "cat": "site",
+        "txt": "Conferir página, downloads, apresentações e glossário"
+      },
+      {
+        "id": "pre1t4",
+        "cat": "gravacao",
+        "txt": "Testar teleprompter e captura de tela com dados fictícios"
+      },
+      {
+        "id": "pre1t5",
+        "cat": "entregavel",
+        "txt": "Conferir slides animados e materiais de apoio do EP01"
+      }
+    ]
+  },
+  {
+    "id": "pre2",
+    "titulo": "Pré-lançamento — Primeira videoaula",
+    "datas": "09/11–15/11",
+    "ini": "2026-11-09",
+    "fim": "2026-11-15",
+    "tarefas": [
+      {
+        "id": "pre2t1",
+        "cat": "gravacao",
+        "txt": "Gravar professora, tela e slides do EP01"
+      },
+      {
+        "id": "pre2t2",
+        "cat": "gravacao",
+        "txt": "Editar vídeo; conferir áudio, legendas e conteúdo"
+      },
+      {
+        "id": "pre2t3",
+        "cat": "ep",
+        "txt": "Ensaiar EP02 e gravar como reserva"
+      },
+      {
+        "id": "pre2t4",
+        "cat": "marca",
+        "txt": "Criar thumbnail, título e descrição com material gratuito"
+      },
+      {
+        "id": "pre2t5",
+        "cat": "site",
+        "txt": "Programar EP01 e revisar links em celular e computador"
+      }
+    ]
+  },
+  {
+    "id": "ep01",
+    "titulo": "Semana EP01 — IA do zero: o que é e como pode ajudar na saúde?",
+    "datas": "16/11–22/11",
+    "ini": "2026-11-16",
+    "fim": "2026-11-22",
+    "tarefas": [
+      {
+        "id": "ep01t1",
+        "cat": "ep",
+        "txt": "EP01 — Revisar roteiro falado, fontes e fatos atuais"
+      },
+      {
+        "id": "ep01t2",
+        "cat": "gravacao",
+        "txt": "EP01 — Ensaiar no teleprompter e gravar a professora"
+      },
+      {
+        "id": "ep01t3",
+        "cat": "gravacao",
+        "txt": "EP01 — Capturar tutorial de tela sem dados reais"
+      },
+      {
+        "id": "ep01t4",
+        "cat": "entregavel",
+        "txt": "EP01 — Revisar slides HTML e material complementar"
+      },
+      {
+        "id": "ep01t5",
+        "cat": "gravacao",
+        "txt": "EP01 — Editar vídeo e validar legibilidade"
+      },
+      {
+        "id": "ep01t6",
+        "cat": "marca",
+        "txt": "EP01 — Preparar thumbnail, título, descrição e divulgação"
+      },
+      {
+        "id": "ep01t7",
+        "cat": "site",
+        "txt": "EP01 — Publicar, testar downloads e analisar comentários"
+      }
+    ]
+  },
+  {
+    "id": "ep02",
+    "titulo": "Semana EP02 — ChatGPT do zero: conheça a ferramenta e faça seu primeiro pedido",
+    "datas": "23/11–29/11",
+    "ini": "2026-11-23",
+    "fim": "2026-11-29",
+    "tarefas": [
+      {
+        "id": "ep02t1",
+        "cat": "ep",
+        "txt": "EP02 — Revisar roteiro falado, fontes e fatos atuais"
+      },
+      {
+        "id": "ep02t2",
+        "cat": "gravacao",
+        "txt": "EP02 — Ensaiar no teleprompter e gravar a professora"
+      },
+      {
+        "id": "ep02t3",
+        "cat": "gravacao",
+        "txt": "EP02 — Capturar tutorial de tela sem dados reais"
+      },
+      {
+        "id": "ep02t4",
+        "cat": "entregavel",
+        "txt": "EP02 — Revisar slides HTML e material complementar"
+      },
+      {
+        "id": "ep02t5",
+        "cat": "gravacao",
+        "txt": "EP02 — Editar vídeo e validar legibilidade"
+      },
+      {
+        "id": "ep02t6",
+        "cat": "marca",
+        "txt": "EP02 — Preparar thumbnail, título, descrição e divulgação"
+      },
+      {
+        "id": "ep02t7",
+        "cat": "site",
+        "txt": "EP02 — Publicar, testar downloads e analisar comentários"
+      }
+    ]
+  },
+  {
+    "id": "ep03",
+    "titulo": "Semana EP03 — Prompts do zero: como pedir à IA o que você realmente precisa",
+    "datas": "30/11–06/12",
+    "ini": "2026-11-30",
+    "fim": "2026-12-06",
+    "tarefas": [
+      {
+        "id": "ep03t1",
+        "cat": "ep",
+        "txt": "EP03 — Revisar roteiro falado, fontes e fatos atuais"
+      },
+      {
+        "id": "ep03t2",
+        "cat": "gravacao",
+        "txt": "EP03 — Ensaiar no teleprompter e gravar a professora"
+      },
+      {
+        "id": "ep03t3",
+        "cat": "gravacao",
+        "txt": "EP03 — Capturar tutorial de tela sem dados reais"
+      },
+      {
+        "id": "ep03t4",
+        "cat": "entregavel",
+        "txt": "EP03 — Revisar slides HTML e material complementar"
+      },
+      {
+        "id": "ep03t5",
+        "cat": "gravacao",
+        "txt": "EP03 — Editar vídeo e validar legibilidade"
+      },
+      {
+        "id": "ep03t6",
+        "cat": "marca",
+        "txt": "EP03 — Preparar thumbnail, título, descrição e divulgação"
+      },
+      {
+        "id": "ep03t7",
+        "cat": "site",
+        "txt": "EP03 — Publicar, testar downloads e analisar comentários"
+      }
+    ]
+  },
+  {
+    "id": "ep04",
+    "titulo": "Semana EP04 — A IA pode errar: fontes, privacidade e segurança na saúde",
+    "datas": "07/12–13/12",
+    "ini": "2026-12-07",
+    "fim": "2026-12-13",
+    "tarefas": [
+      {
+        "id": "ep04t1",
+        "cat": "ep",
+        "txt": "EP04 — Revisar roteiro falado, fontes e fatos atuais"
+      },
+      {
+        "id": "ep04t2",
+        "cat": "gravacao",
+        "txt": "EP04 — Ensaiar no teleprompter e gravar a professora"
+      },
+      {
+        "id": "ep04t3",
+        "cat": "gravacao",
+        "txt": "EP04 — Capturar tutorial de tela sem dados reais"
+      },
+      {
+        "id": "ep04t4",
+        "cat": "entregavel",
+        "txt": "EP04 — Revisar slides HTML e material complementar"
+      },
+      {
+        "id": "ep04t5",
+        "cat": "gravacao",
+        "txt": "EP04 — Editar vídeo e validar legibilidade"
+      },
+      {
+        "id": "ep04t6",
+        "cat": "marca",
+        "txt": "EP04 — Preparar thumbnail, título, descrição e divulgação"
+      },
+      {
+        "id": "ep04t7",
+        "cat": "site",
+        "txt": "EP04 — Publicar, testar downloads e analisar comentários"
+      }
+    ]
+  },
+  {
+    "id": "ep05",
+    "titulo": "Semana EP05 — Ganhe tempo com IA: comunicados, checklists e atas",
+    "datas": "14/12–20/12",
+    "ini": "2026-12-14",
+    "fim": "2026-12-20",
+    "tarefas": [
+      {
+        "id": "ep05t1",
+        "cat": "ep",
+        "txt": "EP05 — Revisar roteiro falado, fontes e fatos atuais"
+      },
+      {
+        "id": "ep05t2",
+        "cat": "gravacao",
+        "txt": "EP05 — Ensaiar no teleprompter e gravar a professora"
+      },
+      {
+        "id": "ep05t3",
+        "cat": "gravacao",
+        "txt": "EP05 — Capturar tutorial de tela sem dados reais"
+      },
+      {
+        "id": "ep05t4",
+        "cat": "entregavel",
+        "txt": "EP05 — Revisar slides HTML e material complementar"
+      },
+      {
+        "id": "ep05t5",
+        "cat": "gravacao",
+        "txt": "EP05 — Editar vídeo e validar legibilidade"
+      },
+      {
+        "id": "ep05t6",
+        "cat": "marca",
+        "txt": "EP05 — Preparar thumbnail, título, descrição e divulgação"
+      },
+      {
+        "id": "ep05t7",
+        "cat": "site",
+        "txt": "EP05 — Publicar, testar downloads e analisar comentários"
+      }
+    ]
+  },
+  {
+    "id": "ep06",
+    "titulo": "Semana EP06 — Como trabalhar com documentos e arquivos usando IA",
+    "datas": "21/12–27/12",
+    "ini": "2026-12-21",
+    "fim": "2026-12-27",
+    "tarefas": [
+      {
+        "id": "ep06t1",
+        "cat": "ep",
+        "txt": "EP06 — Revisar roteiro falado, fontes e fatos atuais"
+      },
+      {
+        "id": "ep06t2",
+        "cat": "gravacao",
+        "txt": "EP06 — Ensaiar no teleprompter e gravar a professora"
+      },
+      {
+        "id": "ep06t3",
+        "cat": "gravacao",
+        "txt": "EP06 — Capturar tutorial de tela sem dados reais"
+      },
+      {
+        "id": "ep06t4",
+        "cat": "entregavel",
+        "txt": "EP06 — Revisar slides HTML e material complementar"
+      },
+      {
+        "id": "ep06t5",
+        "cat": "gravacao",
+        "txt": "EP06 — Editar vídeo e validar legibilidade"
+      },
+      {
+        "id": "ep06t6",
+        "cat": "marca",
+        "txt": "EP06 — Preparar thumbnail, título, descrição e divulgação"
+      },
+      {
+        "id": "ep06t7",
+        "cat": "site",
+        "txt": "EP06 — Publicar, testar downloads e analisar comentários"
+      }
+    ]
+  },
+  {
+    "id": "ep07",
+    "titulo": "Semana EP07 — Planilhas e indicadores com IA: análise para iniciantes",
+    "datas": "04/01–10/01",
+    "ini": "2027-01-04",
+    "fim": "2027-01-10",
+    "tarefas": [
+      {
+        "id": "ep07t1",
+        "cat": "ep",
+        "txt": "EP07 — Revisar roteiro falado, fontes e fatos atuais"
+      },
+      {
+        "id": "ep07t2",
+        "cat": "gravacao",
+        "txt": "EP07 — Ensaiar no teleprompter e gravar a professora"
+      },
+      {
+        "id": "ep07t3",
+        "cat": "gravacao",
+        "txt": "EP07 — Capturar tutorial de tela sem dados reais"
+      },
+      {
+        "id": "ep07t4",
+        "cat": "entregavel",
+        "txt": "EP07 — Revisar slides HTML e material complementar"
+      },
+      {
+        "id": "ep07t5",
+        "cat": "gravacao",
+        "txt": "EP07 — Editar vídeo e validar legibilidade"
+      },
+      {
+        "id": "ep07t6",
+        "cat": "marca",
+        "txt": "EP07 — Preparar thumbnail, título, descrição e divulgação"
+      },
+      {
+        "id": "ep07t7",
+        "cat": "site",
+        "txt": "EP07 — Publicar, testar downloads e analisar comentários"
+      }
+    ]
+  },
+  {
+    "id": "ep08",
+    "titulo": "Semana EP08 — Crie uma aula e slides com ajuda da IA",
+    "datas": "11/01–17/01",
+    "ini": "2027-01-11",
+    "fim": "2027-01-17",
+    "tarefas": [
+      {
+        "id": "ep08t1",
+        "cat": "ep",
+        "txt": "EP08 — Revisar roteiro falado, fontes e fatos atuais"
+      },
+      {
+        "id": "ep08t2",
+        "cat": "gravacao",
+        "txt": "EP08 — Ensaiar no teleprompter e gravar a professora"
+      },
+      {
+        "id": "ep08t3",
+        "cat": "gravacao",
+        "txt": "EP08 — Capturar tutorial de tela sem dados reais"
+      },
+      {
+        "id": "ep08t4",
+        "cat": "entregavel",
+        "txt": "EP08 — Revisar slides HTML e material complementar"
+      },
+      {
+        "id": "ep08t5",
+        "cat": "gravacao",
+        "txt": "EP08 — Editar vídeo e validar legibilidade"
+      },
+      {
+        "id": "ep08t6",
+        "cat": "marca",
+        "txt": "EP08 — Preparar thumbnail, título, descrição e divulgação"
+      },
+      {
+        "id": "ep08t7",
+        "cat": "site",
+        "txt": "EP08 — Publicar, testar downloads e analisar comentários"
+      }
+    ]
+  },
+  {
+    "id": "ep09",
+    "titulo": "Semana EP09 — Pesquise melhor com IA: encontre fontes e confira respostas",
+    "datas": "18/01–24/01",
+    "ini": "2027-01-18",
+    "fim": "2027-01-24",
+    "tarefas": [
+      {
+        "id": "ep09t1",
+        "cat": "ep",
+        "txt": "EP09 — Revisar roteiro falado, fontes e fatos atuais"
+      },
+      {
+        "id": "ep09t2",
+        "cat": "gravacao",
+        "txt": "EP09 — Ensaiar no teleprompter e gravar a professora"
+      },
+      {
+        "id": "ep09t3",
+        "cat": "gravacao",
+        "txt": "EP09 — Capturar tutorial de tela sem dados reais"
+      },
+      {
+        "id": "ep09t4",
+        "cat": "entregavel",
+        "txt": "EP09 — Revisar slides HTML e material complementar"
+      },
+      {
+        "id": "ep09t5",
+        "cat": "gravacao",
+        "txt": "EP09 — Editar vídeo e validar legibilidade"
+      },
+      {
+        "id": "ep09t6",
+        "cat": "marca",
+        "txt": "EP09 — Preparar thumbnail, título, descrição e divulgação"
+      },
+      {
+        "id": "ep09t7",
+        "cat": "site",
+        "txt": "EP09 — Publicar, testar downloads e analisar comentários"
+      }
+    ]
+  },
+  {
+    "id": "ep10",
+    "titulo": "Semana EP10 — Organize projetos e contexto para não começar do zero",
+    "datas": "25/01–31/01",
+    "ini": "2027-01-25",
+    "fim": "2027-01-31",
+    "tarefas": [
+      {
+        "id": "ep10t1",
+        "cat": "ep",
+        "txt": "EP10 — Revisar roteiro falado, fontes e fatos atuais"
+      },
+      {
+        "id": "ep10t2",
+        "cat": "gravacao",
+        "txt": "EP10 — Ensaiar no teleprompter e gravar a professora"
+      },
+      {
+        "id": "ep10t3",
+        "cat": "gravacao",
+        "txt": "EP10 — Capturar tutorial de tela sem dados reais"
+      },
+      {
+        "id": "ep10t4",
+        "cat": "entregavel",
+        "txt": "EP10 — Revisar slides HTML e material complementar"
+      },
+      {
+        "id": "ep10t5",
+        "cat": "gravacao",
+        "txt": "EP10 — Editar vídeo e validar legibilidade"
+      },
+      {
+        "id": "ep10t6",
+        "cat": "marca",
+        "txt": "EP10 — Preparar thumbnail, título, descrição e divulgação"
+      },
+      {
+        "id": "ep10t7",
+        "cat": "site",
+        "txt": "EP10 — Publicar, testar downloads e analisar comentários"
+      }
+    ]
+  },
+  {
+    "id": "ep11",
+    "titulo": "Semana EP11 — ChatGPT, Claude e outras IAs: qual usar?",
+    "datas": "01/02–07/02",
+    "ini": "2027-02-01",
+    "fim": "2027-02-07",
+    "tarefas": [
+      {
+        "id": "ep11t1",
+        "cat": "ep",
+        "txt": "EP11 — Revisar roteiro falado, fontes e fatos atuais"
+      },
+      {
+        "id": "ep11t2",
+        "cat": "gravacao",
+        "txt": "EP11 — Ensaiar no teleprompter e gravar a professora"
+      },
+      {
+        "id": "ep11t3",
+        "cat": "gravacao",
+        "txt": "EP11 — Capturar tutorial de tela sem dados reais"
+      },
+      {
+        "id": "ep11t4",
+        "cat": "entregavel",
+        "txt": "EP11 — Revisar slides HTML e material complementar"
+      },
+      {
+        "id": "ep11t5",
+        "cat": "gravacao",
+        "txt": "EP11 — Editar vídeo e validar legibilidade"
+      },
+      {
+        "id": "ep11t6",
+        "cat": "marca",
+        "txt": "EP11 — Preparar thumbnail, título, descrição e divulgação"
+      },
+      {
+        "id": "ep11t7",
+        "cat": "site",
+        "txt": "EP11 — Publicar, testar downloads e analisar comentários"
+      }
+    ]
+  },
+  {
+    "id": "ep12",
+    "titulo": "Semana EP12 — De conversa a processo: seu primeiro fluxo com agente de IA",
+    "datas": "08/02–14/02",
+    "ini": "2027-02-08",
+    "fim": "2027-02-14",
+    "tarefas": [
+      {
+        "id": "ep12t1",
+        "cat": "ep",
+        "txt": "EP12 — Revisar roteiro falado, fontes e fatos atuais"
+      },
+      {
+        "id": "ep12t2",
+        "cat": "gravacao",
+        "txt": "EP12 — Ensaiar no teleprompter e gravar a professora"
+      },
+      {
+        "id": "ep12t3",
+        "cat": "gravacao",
+        "txt": "EP12 — Capturar tutorial de tela sem dados reais"
+      },
+      {
+        "id": "ep12t4",
+        "cat": "entregavel",
+        "txt": "EP12 — Revisar slides HTML e material complementar"
+      },
+      {
+        "id": "ep12t5",
+        "cat": "gravacao",
+        "txt": "EP12 — Editar vídeo e validar legibilidade"
+      },
+      {
+        "id": "ep12t6",
+        "cat": "marca",
+        "txt": "EP12 — Preparar thumbnail, título, descrição e divulgação"
+      },
+      {
+        "id": "ep12t7",
+        "cat": "site",
+        "txt": "EP12 — Publicar, testar downloads e analisar comentários"
+      }
+    ]
+  }
 ];
 
 const CHK = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l5 5 9-11"/></svg>`;
 
-const KEY = "modo-ia-saude-plano-v11";
+const KEY = "estrategia-plano-ia-do-zero-v2";
 let state = JSON.parse(localStorage.getItem(KEY) || "{}");
 const save = () => localStorage.setItem(KEY, JSON.stringify(state));
 
@@ -1218,7 +1620,7 @@ Object.values(cats).forEach(c => {
 // Data
 const hoje = new Date();
 hoje.setHours(0, 0, 0, 0);
-const alvo = new Date("2026-08-03T00:00:00");
+const alvo = new Date("2026-11-16T00:00:00");
 const dias = Math.max(0, Math.ceil((alvo - hoje) / (1000 * 60 * 60 * 24)));
 document.getElementById("diasNum").textContent = dias;
 
