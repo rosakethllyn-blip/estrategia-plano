@@ -1,62 +1,67 @@
-# Material de apoio — Aula 01: primeiros usos de IA na gestão da saúde
+# Aula 01 — IA do Zero: da conversa à criação
 
-**Estrateg[IA] • Temporada IA do Zero**  
-**Atenção:** o exemplo é fictício. Não copie dados pessoais de pacientes, profissionais ou documentos confidenciais para uma ferramenta sem autorização institucional.
+**Material de apoio • Estrateg[IA]**
 
-## O problema que resolvemos na aula
+## Mapa mental: 8 conceitos
 
-O Núcleo de Educação Permanente tem seis demandas espalhadas em mensagens, e-mails, pastas e anotações. O objetivo é **organizar a informação**, não transferir para a IA a decisão sobre prioridades, prazos e responsáveis.
+1. **IA generativa**: sistemas capazes de gerar texto, imagem, código e outros conteúdos a partir de solicitações.
+2. **Modelo**: componente que interpreta o contexto e produz a resposta.
+3. **Aplicativo**: interface na qual você utiliza modelos e ferramentas, como ChatGPT ou Claude.
+4. **Token**: unidade de processamento de linguagem, não necessariamente uma palavra.
+5. **Contexto**: dados e instruções disponíveis para a resposta naquela interação.
+6. **Ferramenta**: recurso que permite buscar informações ou executar uma ação autorizada.
+7. **Agente**: sistema que pode trabalhar em ciclos de objetivo, plano, ações e verificação, dependendo de ferramentas, permissões e supervisão.
+8. **Skill / conector / plugin / MCP**: mecanismos distintos para reutilizar procedimentos e dar acesso controlado a recursos e sistemas externos.
 
-## Prompt 01 — organizar as demandas
-
-```text
-Estou organizando as demandas mensais do Núcleo de Educação Permanente de um hospital fictício.
-
-Tenho informações espalhadas em mensagens, anotações, e-mails e pastas. Preciso que você me ajude a organizar tudo, mas não tome decisões por mim e não invente dados.
-
-Estas são as informações que encontrei:
-
-1. Mensagem da coordenação: precisamos revisar o treinamento de prevenção de quedas.
-2. Anotação de reunião: organizar capacitação sobre identificação correta do paciente para novos colaboradores.
-3. Arquivo na pasta do Drive: apresentação antiga sobre higienização das mãos, que precisa ser revisada.
-4. E-mail recebido: solicitação de atualização sobre registros de enfermagem, sem prazo definido.
-5. Planilha de planejamento: há uma demanda por capacitação em acolhimento e comunicação, ainda sem turma definida.
-6. Ata de reunião: alinhar com o Núcleo de Segurança do Paciente quais temas devem receber atenção no próximo mês.
-
-Quero que você:
-
-A. Organize tudo em um quadro com tema, origem da informação, entrega sugerida, informação que falta e próximo passo.
-B. Sugira uma estrutura de pastas digitais para guardar esses materiais de maneira organizada, com nomes simples e padronizados.
-C. Indique quais informações preciso levantar antes de definir as prioridades, os responsáveis e as datas.
-D. Sugira critérios que eu poderia usar para discutir prioridades com a equipe, sem estabelecer uma ordem definitiva.
-E. Separe claramente o que foi informado por mim do que é uma sugestão sua.
-
-Use linguagem clara, própria da gestão em saúde. Não crie indicadores, prazos, nomes de profissionais ou decisões que eu não forneci.
-```
-
-## Prompt 02 — conferir e identificar lacunas
+## PROMPT 01 — construir protótipo interativo (dados 100% fictícios)
 
 ```text
-Revise a resposta anterior como se estivesse preparando esse material para uma reunião de gestão.
-1. Mostre o que veio diretamente das minhas informações e o que é hipótese ou sugestão sua.
-2. Confira se você inventou algum prazo, responsável, indicador ou prioridade. Se inventou, remova e marque "A definir".
-3. Destaque até cinco perguntas que eu preciso levar para a equipe antes de aprovar qualquer plano.
-4. Entregue uma proposta enxuta de estrutura de pastas digitais. Não afirme que as pastas foram criadas.
+Quero que você atue como uma pessoa desenvolvedora de interfaces educacionais e me ajude a CRIAR um protótipo interativo, sem usar dados reais.
+
+PROJETO: Painel demonstrativo de uma instituição de saúde fictícia, chamado “Painel de Gestão”.
+PÚBLICO: coordenadores e gestores da saúde que nunca programaram.
+
+REQUISITOS:
+1. Entregue UM arquivo HTML completo, com CSS e JavaScript dentro do próprio arquivo, sem bibliotecas ou links externos.
+2. Visual claro e profissional: fundo branco, texto quase preto, cor laranja #F23C00 para destaques, fonte de sistema e espaços de respiro.
+3. Mostre três indicadores DIDÁTICOS E FICTÍCIOS: treinamentos concluídos 72%, atividades planejadas 18 e pendências 5. Informe visivelmente que são dados de demonstração.
+4. Adicione uma lista de quatro atividades fictícias, cada uma com título, responsável “A definir”, status e um botão para marcar visualmente como concluída.
+5. Adicione filtro para exibir todas, pendentes ou concluídas.
+6. Crie um pequeno quadro “O que revisar antes de usar em uma instituição”, com alerta sobre dados, validação humana e necessidade de integração segura.
+7. A interface deve funcionar em celular e computador.
+8. Inclua comentários no código explicando de forma simples as partes principais.
+
+IMPORTANTE:
+- Não use servidores, banco de dados, login, APIs ou envio de dados.
+- Não afirme que o protótipo já está conectado a qualquer sistema hospitalar.
+- Ao atualizar o status, deixe claro que a mudança acontece só na página aberta e não é salva.
+- Se a plataforma permitir gerar um arquivo, forneça o HTML. Se não, apresente o código completo em um único bloco ```html para que eu possa copiar e salvar como painel.html.
+
+Antes de começar o código, resuma em 4 linhas o que você vai construir.
 ```
 
-## Dez primeiros usos de IA no dia a dia
+## PROMPT 02 — revisar e testar
 
-1. Organizar uma pauta de reunião fictícia.
-2. Transformar uma anotação simulada em lista de pendências.
-3. Propor nomes padronizados para pastas e arquivos.
-4. Criar um checklist inicial para planejamento de treinamento.
-5. Organizar temas de uma capacitação em sequência didática.
-6. Sugerir perguntas para uma reunião de avaliação.
-7. Reescrever um comunicado fictício em linguagem clara.
-8. Estruturar um rascunho de cronograma sem atribuir datas inexistentes.
-9. Propor categorias para organizar indicadores agregados de teste.
-10. Criar uma lista de informações que faltam para concluir um plano.
+```text
+Revise o protótipo HTML que você acabou de criar.
+1. Verifique se todos os botões realmente funcionam e se o filtro separa corretamente atividades pendentes e concluídas.
+2. Confira se nenhum dado fictício foi apresentado como indicador real.
+3. Confira acessibilidade básica: contraste, rótulos dos botões, foco de teclado e leitura em celular.
+4. Se houver problemas, entregue o HTML COMPLETO corrigido, preservando a aparência.
+5. Explique em linguagem simples o que você corrigiu e quais limitações permanecem: sem banco de dados, sem login, sem dados reais e sem integração com sistemas.
+```
 
-**Verifique sempre:** o que foi fornecido, o que foi sugerido, o que está faltando e quem precisa revisar.
+## Antes de compartilhar com alguém
 
-> A IA, neste exercício, recebe informações digitadas ou coladas. Ela não acessa automaticamente Drive, e-mails, WhatsApp ou pastas. Acesso a arquivos e integração exigem ações e permissões específicas.
+- O protótipo usa números inventados só para aprendizagem.
+- Clicar em “concluído” na página não altera a realidade de uma instituição.
+- Uma versão de demonstração sem banco de dados ou login não é sistema de produção.
+- Não use nomes de pacientes, dados clínicos, documentos protegidos ou informações internas sem autorização e controles institucionais.
+- Revise código e resultados. Em um sistema real, há requisitos adicionais de segurança, acessibilidade, manutenção, auditoria e LGPD.
+
+## Fontes
+
+- Primeira aula do Ruan Braz, referência de estrutura didática: https://www.youtube.com/watch?v=P3PSw-mhPDM
+- Projetos do ChatGPT: https://help.openai.com/pt-br/articles/10169521-projects-in-chatgpt
+- Recursos do Claude Code Desktop: https://code.claude.com/docs/pt/desktop
+- Glossário Estrateg[IA]: https://rosakethllyn-blip.github.io/modo-ia-saude-glossario/
