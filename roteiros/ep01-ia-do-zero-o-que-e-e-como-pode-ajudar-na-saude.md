@@ -14,10 +14,10 @@ formato: "professora na câmera + gravação de tela + slides"
 **Aula:** IA do Zero, aplicada à gestão da saúde  
 **Publicação prevista:** 16 de novembro de 2026  
 **Duração aproximada:** 16 a 18 minutos, variando conforme os resultados da demonstração  
-**Professora:** Rosa Cátia — Estrateg[IA]  
+**Professora:** Rosa Kethllyn — Estrateg[IA]  
 **Objetivo:** ensinar a pensar o primeiro pedido com IA, organizar demandas fictícias do NEP, conferir respostas e distinguir sugestão de decisão institucional.
 
-> **Nota de revisão:** falas reescritas a partir da leitura fornecida pela professora em 29/10/2026. A apresentação pessoal usa o nome ditado nesta revisão; confirmar a grafia para os créditos definitivos. Estrutura didática inspirada na sequência problema → demonstração → revisão, sem copiar falas de terceiros.
+> **Nota de revisão:** falas reescritas a partir da leitura fornecida pela professora em 29/10/2026. A apresentação pessoal usa o nome ditado nesta revisão; grafia confirmada: Rosa Kethllyn. Estrutura didática inspirada na sequência problema → demonstração → revisão, sem copiar falas de terceiros.
 
 > **Produção:** as falas abaixo são o texto-base de gravação. Blocos de comando são para copiar na interface e **não precisam ser lidos palavra por palavra**. Em trechos como “[PAUSA PARA A RESPOSTA REAL NA TELA]”, a professora narra de acordo com a saída efetiva. Não simular um resultado inexistente.
 
@@ -41,7 +41,7 @@ formato: "professora na câmera + gravação de tela + slides"
 
 **FALA — ROSA:**
 
-> Antes de ir pra tela, deixa eu me apresentar. Meu nome é Rosa Cátia, sou enfermeira, trabalho com educação permanente e gestão na saúde e sou a criadora do Estrateg[IA].
+> Antes de ir pra tela, deixa eu me apresentar. Meu nome é Rosa Kethllyn, sou enfermeira, trabalho com educação permanente e gestão na saúde e sou a criadora do Estrateg[IA].
 >
 > Eu conheço essa rotina de ter muita coisa acontecendo ao mesmo tempo. Treinamento pra organizar, material pra revisar, indicador pra acompanhar, reunião pra transformar em encaminhamento... E, às vezes, o dia termina e a gente sente que ficou só organizando demandas.
 >
@@ -194,7 +194,7 @@ Revise a resposta anterior como se estivesse preparando esse material para uma r
 >
 > Me conta nos comentários: qual tarefa da sua rotina você gostaria de organizar com IA? Eu quero usar essas respostas pra trazer exemplos que façam sentido de verdade pra nossa área.
 >
-> Eu sou a Rosa Cátia, e esse é o Estrateg[IA]. A gente se vê na próxima aula.
+> Eu sou a Rosa Kethllyn, e esse é o Estrateg[IA]. A gente se vê na próxima aula.
 
 ---
 
@@ -260,7 +260,7 @@ Revise a resposta anterior como se estivesse preparando esse material para uma r
 
 ## CHECKLIST DE REVISÃO
 
-- [ ] Confirmar a grafia do nome da professora antes de colocar créditos.
+- [ ] Conferir a apresentação e os créditos com o nome Rosa Kethllyn.
 - [ ] Ensaiar a passagem da cena-problema para a abertura do ChatGPT.
 - [ ] Copiar ambos os prompts do roteiro e testar em uma conversa nova.
 - [ ] Verificar se a narração corresponde à resposta produzida na gravação.
