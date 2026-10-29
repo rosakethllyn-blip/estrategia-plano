@@ -4,167 +4,273 @@ temporada: 1
 episodio: 1
 titulo: "IA do zero: o que é e como pode ajudar na saúde?"
 publicacao_planejada: "2026-11-16"
-duracao_alvo_minutos: "14–18"
-status: "roteiro-base pronto; demonstração e falas a ensaiar"
+duracao_alvo_minutos: "16–18"
+status: "roteiro revisado a partir de leitura da professora; pronto para ensaio e demo"
 formato: "professora na câmera + gravação de tela + slides"
 ---
 
 # EP01 — IA do zero: o que é e como pode ajudar na saúde?
 
-**Temporada:** IA do Zero, aplicada à gestão da saúde  
-**Publicação proposta:** 16 de novembro de 2026 (segunda-feira)  
-**Duração-alvo:** 14–18 minutos, com demonstração em ritmo natural  
-**Apresentadora:** Rosa — Estrateg[IA]  
-**Objetivo de aprendizagem:** entender o que a inteligência artificial faz, diferenciar geração de texto de tomada de decisão e reconhecer aplicações úteis na gestão.
+**Aula:** IA do Zero, aplicada à gestão da saúde  
+**Publicação prevista:** 16 de novembro de 2026  
+**Duração aproximada:** 16 a 18 minutos, variando conforme os resultados da demonstração  
+**Professora:** Rosa Cátia — Estrateg[IA]  
+**Objetivo:** ensinar a pensar o primeiro pedido com IA, organizar demandas fictícias do NEP, conferir respostas e distinguir sugestão de decisão institucional.
 
-> **Nota de produção:** roteiro original em linguagem falada; deve ser ensaiado e ajustado à voz da apresentadora. Não se trata de transcrição do Ruan Braz. Nenhum dado real de pacientes, profissionais ou instituição será utilizado na tela. Recursos e telas das plataformas precisam ser conferidos na data de gravação.
+> **Nota de revisão:** falas reescritas a partir da leitura fornecida pela professora em 29/10/2026. A apresentação pessoal usa o nome ditado nesta revisão; confirmar a grafia para os créditos definitivos. Estrutura didática inspirada na sequência problema → demonstração → revisão, sem copiar falas de terceiros.
 
-## CENA 1 — GANCHO | 00:00–01:10
+> **Produção:** as falas abaixo são o texto-base de gravação. Blocos de comando são para copiar na interface e **não precisam ser lidos palavra por palavra**. Em trechos como “[PAUSA PARA A RESPOSTA REAL NA TELA]”, a professora narra de acordo com a saída efetiva. Não simular um resultado inexistente.
 
-**IMAGEM:** câmera frontal, enquadramento médio, olhar direto para a lente. Fundo do estúdio Estrateg[IA], iluminação natural/laranja controlada. Sem vinheta longa.
+## CENA 01 — GANCHO · PARA QUEM É ESSA AULA | 00:00–00:55
 
-**FALA — ROSA:**
-
-“Quando você ouve inteligência artificial, pensa em robôs, programação ou em uma tecnologia muito distante da sua rotina? Eu quero começar com uma pergunta mais simples: quanto tempo você gastou nesta semana organizando informações que já estavam em algum lugar?
-
-Eu sou a Rosa, enfermeira e criadora do Estrateg[IA]. Aqui a gente vai entender tecnologia sem complicar, mas também sem ficar só na teoria. O objetivo é aprender a usar inteligência artificial com responsabilidade para organizar melhor o trabalho de quem gere a saúde.
-
-Nesta aula você vai sair sabendo entender o que a inteligência artificial faz, diferenciar geração de texto de tomada de decisão e reconhecer aplicações úteis na gestão. E eu vou abrir a tela para mostrar um exemplo que você consegue reproduzir sem usar nenhum dado verdadeiro de paciente.”
-
-**EDIÇÃO:** entrar com título curto sobre a imagem e corte para o resultado prometido (print fictício) por 2–3 segundos.
-
-## CENA 2 — O PROBLEMA NA ROTINA | 01:10–03:00
-
-**IMAGEM:** câmera principal e um slide de situação-problema. Pequenos recortes de tela apenas como apoio, não como substituição da explicação.
+**IMAGEM / EDIÇÃO:** Câmera frontal, plano médio. Sem vinheta longa. Na edição, destacar apenas a pergunta sobre o tempo gasto.
 
 **FALA — ROSA:**
 
-“Vamos imaginar esta situação: Um núcleo de educação permanente precisa organizar as demandas do mês, mas tudo está espalhado em anotações e mensagens.
+> Quando você ouve falar em inteligência artificial, você pensa logo em robôs, programação ou numa tecnologia muito fora da sua realidade?
+>
+> Eu quero começar esse vídeo te fazendo uma pergunta. Uma pergunta bem simples: quanto tempo você gastou nessa semana organizando informações que você já tinha em algum lugar?
+>
+> É aquela informação que você sabe que existe, mas não lembra se ficou na mensagem, numa pasta do computador, no Drive, numa ata de reunião... E aí você perde um tempo danado procurando, juntando tudo e tentando descobrir o que fazer primeiro.
+>
+> Se você trabalha na saúde, principalmente com gestão, coordenação ou educação permanente, provavelmente já passou por isso. E é justamente por aí que eu quero começar a falar de inteligência artificial.
 
-Esse exemplo é inventado, mas a lógica é familiar para qualquer pessoa que já coordenou equipe, organizou uma reunião, participou de auditoria ou precisou entregar algum material com prazo curto.
+## CENA 02 — QUEM SOU EU · APRESENTAÇÃO | 00:55–01:45
 
-O primeiro cuidado é identificar a natureza do problema. Eu preciso de uma resposta? Preciso organizar informações? Comparar versões? Criar um rascunho? Ou tomar uma decisão que depende de julgamento profissional?
-
-Nem tudo deve ser entregue para uma ferramenta. Quando a tarefa exige autorização, conferência de norma vigente, decisão assistencial ou dados protegidos, a responsabilidade continua com as pessoas e com a instituição. A boa aplicação de IA começa escolhendo corretamente o que pedir.”
-
-**SLIDE:** situação em três colunas: contexto, dificuldade, resultado esperado.
-
-## CENA 3 — ENTENDA O CONCEITO | 03:00–05:40
-
-**IMAGEM:** câmera com alternância para dois slides. Destaque palavras-chave em laranja #F23C00, sem blocos extensos de texto.
+**IMAGEM / EDIÇÃO:** Câmera frontal, leve aproximação. Inserir GC com nome e função; logo Estrateg[IA] discreta.
 
 **FALA — ROSA:**
 
-“Agora vamos entender a ideia por trás do exemplo.
+> Antes de ir pra tela, deixa eu me apresentar. Meu nome é Rosa Cátia, sou enfermeira, trabalho com educação permanente e gestão na saúde e sou a criadora do Estrateg[IA].
+>
+> Eu conheço essa rotina de ter muita coisa acontecendo ao mesmo tempo. Treinamento pra organizar, material pra revisar, indicador pra acompanhar, reunião pra transformar em encaminhamento... E, às vezes, o dia termina e a gente sente que ficou só organizando demandas.
+>
+> Eu criei esse espaço pra mostrar, de um jeito simples e com exemplos da nossa realidade, como usar inteligência artificial no trabalho. Aqui a gente vai aprender desde o básico. ChatGPT, Claude e outras ferramentas, mas sem aquele monte de termo difícil jogado de uma vez.
+>
+> Minha ideia é que você consiga abrir a ferramenta, entender o que está fazendo e, principalmente, saber avaliar se a resposta serve ou não pra sua realidade. Porque fazer mais rápido é bom. Fazer sentido é melhor ainda.
 
-Inteligência artificial é um conjunto de técnicas que permite a sistemas realizar tarefas como reconhecer padrões, gerar textos e apoiar análises. Um modelo generativo não consulta automaticamente a verdade nem conhece a realidade do seu hospital. Ele produz uma resposta a partir das informações e instruções que recebe, e por isso a qualidade da saída precisa ser conferida.
+## CENA 03 — A SITUAÇÃO-PROBLEMA · NÚCLEO DE EDUCAÇÃO PERMANENTE | 01:45–03:10
 
-Eu gosto de explicar isso trazendo para a nossa experiência profissional. Pense na IA como um apoio para o planejamento de uma campanha de vacinação institucional: ela ajuda a organizar etapas e perguntas que você precisa fazer. Mas quem verifica os protocolos, define os profissionais responsáveis e aprova o cronograma é a equipe. Ferramenta inteligente não significa decisão autônoma segura.
-
-Perceba uma diferença importante: produzir um texto não é comprovar um fato; organizar um plano não é aprovar um plano; sugerir uma prioridade não é conhecer toda a realidade de um setor. Essas diferenças precisam estar claras desde o primeiro contato com a tecnologia.
-
-Um bom uso da IA não é simplesmente perguntar e aceitar. É orientar, observar o que foi produzido, identificar lacunas e revisar. É assim que uma ferramenta vira apoio ao trabalho, e não mais um motivo de retrabalho.”
-
-**NA TELA:** diagrama com quatro etapas: **pedido → proposta → conferência → uso autorizado**.
-
-## CENA 4 — DEMONSTRAÇÃO NA TELA | 05:40–11:00
-
-**IMAGEM:** gravação de tela em resolução mínima 1920×1080, zoom suave nas áreas essenciais. A professora aparece em uma janela pequena quando útil. Não exibir dados sensíveis, e-mails pessoais, nomes de pacientes ou logins privados.
-
-**FALA — ROSA (introdução à demo):**
-
-“Agora eu vou te mostrar de verdade. Eu não quero que você fique só com uma explicação bonita. Quero que você veja o pedido, acompanhe a resposta e saiba o que analisar antes de utilizar o resultado.
-
-Vou trabalhar exclusivamente com dados fictícios. Se você estiver reproduzindo este exercício na sua instituição, primeiro confirme quais ferramentas e quais tipos de informação são permitidos.”
-
-**PASSO A PASSO / TEXTO DE APOIO À NARRAÇÃO:**
-
-No ChatGPT, sem incluir dados pessoais, digite: “Sou coordenadora de educação permanente de um hospital fictício. Temos três demandas: atualização de prevenção de quedas, capacitação de identificação do paciente e treinamento de registros de enfermagem. Organize um quadro com prioridade sugerida, justificativa, informações que faltam, responsáveis a definir e próximos passos. Não invente dados.” Em seguida, peça: “Quais pontos precisam de validação humana antes de executar esse plano?”
-
-**FALA — ROSA (comentário ao resultado):**
-
-“Observe que a IA estruturou um quadro, mas não sabe quantos profissionais trabalham no setor, quais indicadores estão mais críticos nem o calendário da instituição. Não aceite a prioridade como uma decisão fechada: use a resposta como ponto de partida para uma conversa mais informada.
-
-Aqui eu quero fazer uma pausa. Quando o resultado parece pronto, é a hora certa de perguntar: o que veio do meu pedido? O que a ferramenta inferiu? Que informação ainda precisa ser confirmada? E o que só alguém da equipe pode decidir?
-
-Você pode pedir que a própria IA aponte lacunas, mas a revisão final não deve depender exclusivamente dela. Compare com a fonte, com o objetivo real e com as orientações aplicáveis.”
-
-**CAPTURAS OBRIGATÓRIAS:** tela inicial, pedido original, resultado, pedido de revisão e comparação antes/depois.
-
-## CENA 5 — COMO LEVAR PARA O TRABALHO | 11:00–13:20
-
-**IMAGEM:** retorno ao plano médio; intercalar slide com checklist e exemplo de aplicação.
+**IMAGEM / EDIÇÃO:** Câmera → slide de anotações, mensagens, arquivos e ata apontando para uma caixa central NEP. Os documentos da demo são fictícios.
 
 **FALA — ROSA:**
 
-“Eu quero que você leve desta aula mais do que uma ferramenta. Quero que leve um critério.
+> Vamos imaginar uma situação. Você está à frente de um Núcleo de Educação Permanente e precisa organizar as demandas do mês.
+>
+> Você recebeu uma mensagem pedindo revisão do treinamento de prevenção de quedas. Numa reunião, alguém lembrou da capacitação sobre identificação do paciente. Tem uma apresentação antiga de higienização das mãos no Drive, um e-mail sobre registros de enfermagem e uma ata com um assunto pra discutir com o Núcleo de Segurança do Paciente.
+>
+> Percebe? Não é que não exista informação. Informação tem. Só que cada pedaço está num lugar diferente, e nenhum deles, sozinho, te entrega uma visão clara do mês.
+>
+> Aí começa aquela parte cansativa: abrir conversa, procurar arquivo, ler ata, anotar o que falta, tentar separar o que já está decidido do que ainda precisa de confirmação. E é fácil alguma demanda ficar esquecida no meio disso.
+>
+> Agora pensa: e se a gente conseguisse colocar essas informações num lugar só e pedir ajuda pra organizar tudo em um quadro? Não pra IA decidir o cronograma do hospital, mas pra ela arrumar a bagunça inicial e mostrar o que ainda precisamos perguntar.
+>
+> É isso que vamos fazer. Agora eu vou te mostrar de verdade.
 
-Antes de usar IA na gestão, responda quatro perguntas: qual é o problema? Que informação posso fornecer? Como vou verificar a resposta? Quem aprova a entrega?
+## CENA 04 — ABRINDO A FERRAMENTA · PREPARAR O TESTE | 03:10–04:25
 
-Isso evita dois extremos: não usar a tecnologia por receio e usar a tecnologia de forma indiscriminada porque a resposta saiu rápido.
-
-A melhor aplicação é aquela que reduz o esforço repetitivo, facilita uma conversa de equipe e melhora a organização — sem esconder dúvidas, sem criar dados e sem passar por cima dos cuidados necessários na saúde.
-
-Você não precisa começar automatizando tudo. Comece com uma rotina pequena, compare o antes e o depois e observe se houve ganho real. Se não melhorou a qualidade ou o tempo, o processo precisa ser ajustado.”
-
-## CENA 6 — EXERCÍCIO + PRÓXIMA AULA | 13:20–14:30
-
-**IMAGEM:** câmera com título do exercício à direita; fechamento com logo Estrateg[IA].
+**IMAGEM / EDIÇÃO:** Captura de tela. Abrir ChatGPT ou Claude, conversa nova. Mostrar informações fictícias previamente digitadas; não abrir arquivos privados ou abas pessoais.
 
 **FALA — ROSA:**
 
-“Agora a sua vez: Anote três tarefas repetitivas da sua semana, identifique quais dependem de dados e escolha uma para testar com informações fictícias.
+> Eu não quero que você fique só com a explicação. Quero que você veja o pedido, acompanhe a resposta e saiba analisar antes de utilizar o resultado.
+>
+> Eu vou abrir aqui o ChatGPT. Se você usa o Claude, a lógica desse primeiro teste é muito parecida. Você começa uma conversa nova e explica pra ferramenta o contexto, a tarefa e como quer receber o resultado.
+>
+> E repara num detalhe importante: eu não estou dando acesso ao meu Drive nem às mensagens de ninguém. Eu montei seis informações fictícias e vou colocá-las no próprio pedido. O ChatGPT não vai sair procurando arquivos sozinho só porque eu mencionei uma pasta. Pra trabalhar com arquivos reais, seria necessário anexá-los ou configurar uma integração autorizada, além de avaliar as regras de proteção de dados.
+>
+> Vou mostrar o texto na tela e deixar esse comando como material de apoio pra você poder testar depois.
 
-O material gratuito desta aula está indicado na descrição. Você também pode consultar o Glossário Estrateg[IA] quando encontrar um termo novo.
+## CENA 05 — PROMPT 01 · ORGANIZAR AS DEMANDAS | 04:25–07:20
 
-Na próxima aula, vamos conversar sobre **ChatGPT do zero: conheça a ferramenta e faça seu primeiro pedido**. Uma etapa de cada vez: entender, testar, revisar e só depois ampliar.
+**IMAGEM / EDIÇÃO:** Ação: colar o PROMPT 01 completo e enviar. Dar zoom nos cinco pedidos A–E. Mostrar a saída real, sem inventar como ela ficará. Se necessário, pedir formato de tabela.
 
-Se essa aula ajudou a enxergar uma aplicação possível para a sua rotina, compartilhe com outro profissional da saúde. E lembre: o objetivo não é virar especialista em todas as ferramentas. É sair do operacional com mais clareza para liderar melhor.”
+**FALA — ROSA:**
 
-**TELA FINAL:** Estrateg[IA] — *Saia do operacional.*
+> Olha como eu montei o pedido. Primeiro eu disse qual é o setor: um Núcleo de Educação Permanente de um hospital fictício. Depois expliquei o problema: tenho informações espalhadas em mensagens, anotações, e-mails e pastas.
+>
+> Em seguida, trouxe os seis exemplos. Prevenção de quedas, identificação do paciente, higienização das mãos, registros de enfermagem, acolhimento e uma demanda de alinhamento com o NSP. São assuntos diferentes, mas todos fazem parte do planejamento do setor.
+>
+> E aí vem a parte mais importante: eu não pedi simplesmente 'organize minhas tarefas'. Eu disse exatamente o que quero receber. Um quadro com cada demanda, a origem da informação, o que poderia ser entregue, o que ainda falta saber e qual seria o próximo passo.
+>
+> Também pedi uma sugestão de estrutura de pastas digitais. Isso não significa que a IA vai criar as pastas no meu computador. Por enquanto, ela vai sugerir como eu poderia nomear e separar os materiais. Se eu gostar da organização, aí sim posso aplicar no meu Drive, seguindo o padrão da instituição.
+>
+> Por último, pedi que ela não inventasse prazos, responsáveis ou indicadores. E que separasse claramente o que eu informei do que é sugestão dela.
+>
+> Vou colar esse comando, enviar e acompanhar a resposta com você. [PAUSA PARA A RESPOSTA REAL NA TELA]
+>
+> Agora veja o quadro que apareceu. Na sua tela, a apresentação pode ficar um pouco diferente da minha, porque essas ferramentas não devolvem sempre as mesmas palavras. O que importa é conferir se as seis demandas foram contempladas e se as colunas fazem sentido.
+>
+> Na hora de olhar as pastas sugeridas, eu também quero ver se os nomes são fáceis de entender. Se o resultado ficar confuso, dá pra responder: 'Simplifique a estrutura, use nomes curtos e separe materiais em revisão de materiais aprovados'. A gente vai ajustando a resposta, não precisa aceitar a primeira versão.
+
+**SEGUNDO PROMPT (para colar na tela; não é fala):**
+
+```text
+Revise a resposta anterior como se estivesse preparando esse material para uma reunião de gestão.
+1. Mostre o que veio diretamente das minhas informações e o que é hipótese ou sugestão sua.
+2. Confira se você inventou algum prazo, responsável, indicador ou prioridade. Se inventou, remova e marque "A definir".
+3. Destaque até cinco perguntas que eu preciso levar para a equipe antes de aprovar qualquer plano.
+4. Entregue uma proposta enxuta de estrutura de pastas digitais. Não afirme que as pastas foram criadas.
+```
+
+
+## CENA 06 — O QUE A RESPOSTA NÃO SABE · SEGUNDO PROMPT | 07:20–10:10
+
+**IMAGEM / EDIÇÃO:** Câmera breve → tela. Destacar campos 'A definir' e origem da informação. Colar PROMPT 02 e comparar saída com primeira versão.
+
+**FALA — ROSA:**
+
+> Agora vem uma parte que, pra mim, é tão importante quanto o prompt. Eu não quero que você olhe essa tabela bonita e pense: pronto, a IA resolveu meu mês.
+>
+> Observe que a IA estruturou um quadro, mas não sabe quantos profissionais trabalham no setor, quais indicadores estão mais críticos, qual a disponibilidade das equipes nem o calendário da instituição.
+>
+> Ela também não sabe se o material de prevenção de quedas precisa de atualização urgente por causa de um dado que só o seu hospital tem. E não tem como definir, de maneira responsável, a prioridade real sem essas informações.
+>
+> Então não aceite uma prioridade como decisão fechada. Use a resposta como ponto de partida pra uma conversa mais informada com a equipe.
+>
+> Eu vou fazer agora uma segunda pergunta. Olha só: 'Revise sua resposta. Separe o que veio das minhas informações do que é hipótese ou sugestão. Remova prazos e responsáveis que não foram informados. Mostre o que está a definir e quais perguntas eu preciso fazer antes de aprovar esse planejamento.'
+>
+> Isso muda a forma como você usa a ferramenta. Em vez de só pedir um resultado pronto, você passa a pedir uma revisão crítica do próprio rascunho.
+>
+> [PAUSA PARA A RESPOSTA REAL NA TELA] Aqui eu vou comparar o antes e o depois. Se ela trouxe alguma informação como se fosse um fato, mas que eu nunca informei, isso precisa sair. Se algum campo está em branco, ótimo: agora nós sabemos o que precisa ser levantado, em vez de fingir que já sabemos.
+>
+> Você também pode aproveitar essas perguntas numa reunião de alinhamento. Por exemplo: existe uma meta institucional relacionada a esse treinamento? Qual equipe ainda não foi capacitada? Há prazo normativo? Quem aprova o conteúdo? São perguntas que transformam um rascunho organizado num planejamento que pode, de fato, ser discutido.
+
+## CENA 07 — AFINAL, O QUE É IA E O QUE ELA FEZ AQUI? | 10:10–12:20
+
+**IMAGEM / EDIÇÃO:** Câmera + 2 slides: entrada → resposta → revisão; exemplos de informação vs decisão. Sem jargões longos.
+
+**FALA — ROSA:**
+
+> Talvez você esteja pensando: tá, Rosa, mas onde entra a inteligência artificial nisso tudo? E será que isso já é usar IA de verdade?
+>
+> É sim. E não precisa começar construindo um robô ou aprendendo a programar. Inteligência artificial é um campo amplo de tecnologias que conseguem reconhecer padrões, analisar informações e, em alguns casos, gerar conteúdos. O ChatGPT e o Claude são exemplos de ferramentas com IA generativa.
+>
+> Quando eu coloquei aquelas demandas, o modelo usou o texto que recebeu pra produzir uma proposta de organização. Ele reconheceu semelhanças entre os assuntos, distribuiu as informações num formato de quadro e sugeriu uma estrutura de pastas.
+>
+> Mas atenção: organizar informações não é o mesmo que comprovar que elas estão corretas. E sugerir um caminho não é o mesmo que tomar uma decisão pela instituição.
+>
+> Eu gosto de pensar assim: você pede ajuda pra deixar a mesa de trabalho organizada. A IA ajuda a colocar os papéis em pilhas, dar nome às pilhas e apontar os papéis que estão faltando. Só que quem sabe o que é urgente, o que foi aprovado e o que precisa ser levado à coordenação continua sendo você e sua equipe.
+>
+> É por isso que eu gosto tanto dessa sequência: eu apresento o problema, trago os dados que posso usar, peço uma proposta, confiro o resultado e só depois decido o que faz sentido aproveitar.
+>
+> Um texto bem escrito não é garantia de verdade. E uma tabela com aparência profissional pode ter uma informação inventada. Quando você usa IA na saúde, a conferência não é opcional.
+
+## CENA 08 — COMO LEVAR A EXPERIÊNCIA PARA SUA ROTINA | 12:20–14:30
+
+**IMAGEM / EDIÇÃO:** Slide com quatro perguntas e retorno à câmera. Mostrar um pequeno antes/depois do quadro organizado.
+
+**FALA — ROSA:**
+
+> Agora que você viu o exemplo, eu quero trazer isso pro seu dia a dia.
+>
+> Você não precisa começar pelo processo mais complicado do hospital. Escolhe alguma coisa pequena, de preferência repetitiva e que não envolva dado sensível: organizar um calendário fictício de capacitações, montar um checklist de reunião, transformar tópicos de uma ata simulada em pendências ou estruturar perguntas para avaliar um treinamento.
+>
+> Antes de abrir qualquer ferramenta, se pergunte: o que eu quero resolver? Que informações eu tenho? O que eu posso compartilhar? E quem precisa conferir o resultado?
+>
+> Se a resposta vier incompleta, não tem problema. A conversa continua. Você pode dizer 'faltou uma coluna', 'essa classificação não faz sentido' ou 'mostre quais dados você está supondo'. A IA não precisa acertar de primeira pra ser útil. Você precisa saber conduzir e revisar.
+>
+> Outra coisa: no ambiente de saúde, não coloque informações identificáveis de pacientes, profissionais ou documentos sigilosos numa conta pessoal sem autorização e sem os cuidados necessários. Para começar a aprender, exemplos fictícios são suficientes.
+>
+> E aqui está uma coisa que eu gostaria que você observasse: o ganho não está simplesmente em ter uma tabela feita mais rápido. Está em chegar à reunião com as informações reunidas, enxergar o que falta e dedicar menos tempo à busca de arquivos e mais tempo à análise do que precisa ser feito.
+>
+> Se isso não acontecer, a gente ajusta o pedido ou até repensa se aquela tarefa vale usar IA. Porque a ferramenta tem que ajudar o trabalho, não virar mais uma tarefa pra você.
+
+## CENA 09 — EXERCÍCIO, PRÓXIMA AULA E ENCERRAMENTO | 14:30–16:05
+
+**IMAGEM / EDIÇÃO:** Câmera + slide com exercício. Logo Estrateg[IA] discreta e CTA final.
+
+**FALA — ROSA:**
+
+> Pra finalizar, eu quero te passar um exercício bem simples.
+>
+> Pensa na sua última semana de trabalho e anota três tarefas que te fizeram perder tempo organizando informação. Não precisa trazer nada confidencial. Pode ser uma lista de materiais, um cronograma ou até uma pauta de reunião.
+>
+> Escolhe uma delas, cria um exemplo fictício e testa um pedido parecido com o nosso. Depois faz a segunda pergunta: o que você não sabe, o que a ferramenta está sugerindo e o que precisa de validação humana?
+>
+> Eu deixei o prompt desta aula e um material com ideias de primeiros usos no link da descrição. E, se alguma palavra ainda parecer complicada, tem também o nosso Glossário Estrateg[IA], com os conceitos explicados de forma simples.
+>
+> Na próxima aula a gente vai abrir o ChatGPT do zero, conhecer a interface e fazer os primeiros pedidos passo a passo. Então, se você nunca usou ou sente que só faz perguntas soltas, já fica por aqui, porque essa sequência foi pensada pra você acompanhar desde o começo.
+>
+> Me conta nos comentários: qual tarefa da sua rotina você gostaria de organizar com IA? Eu quero usar essas respostas pra trazer exemplos que façam sentido de verdade pra nossa área.
+>
+> Eu sou a Rosa Cátia, e esse é o Estrateg[IA]. A gente se vê na próxima aula.
 
 ---
 
-## STORYBOARD DE APOIO
+## PROMPT 01 — COPIAR NA DEMONSTRAÇÃO
 
-| Cena | Enquadramento | Elementos visuais | Observações |
-|---|---|---|---|
-| 01 | Câmera A, médio | título + destaque de uma palavra | abertura direta, sem efeitos excessivos |
-| 02 | Câmera A + slide 1 | problema fictício ilustrado | priorizar narrativa, não texto lido |
-| 03 | Câmera A + slides 2–3 | comparação e modelo mental | explicar antes de demonstrar |
-| 04 | captura 1080p + picture-in-picture | interface, pedido e revisão | cursor visível, zoom por etapa |
-| 05 | câmera A + slide de checklist | aplicação e limites | pausas para absorção |
-| 06 | câmera A + slide final | exercício, link, próxima aula | CTA curto e coerente |
+```text
+Estou organizando as demandas mensais do Núcleo de Educação Permanente de um hospital fictício.
 
-## SLIDES A PRODUZIR FUTURAMENTE — DESIGN SYSTEM ESTRATEG[IA]
+Tenho informações espalhadas em mensagens, anotações, e-mails e pastas. Preciso que você me ajude a organizar tudo, mas não tome decisões por mim e não invente dados.
 
-- **Proporção:** 16:9, 1920×1080 para vídeo; versão 9:16 apenas em cortes selecionados.
-- **Fontes:** Funnel Display (títulos); Poppins (corpo).
-- **Paleta:** laranja #F23C00, preto #1A1A1B, branco e cinzas.
-- **Direção:** estética editorial, grids, alto contraste, linhas e diagramas; sem excesso de texto.
-  - **Lâmina 01:** O que é IA — e o que não é. Visual de poucos elementos, grid de respiro, título em Funnel Display e corpo em Poppins.
-  - **Lâmina 02:** IA generativa em uma frase. Visual de poucos elementos, grid de respiro, título em Funnel Display e corpo em Poppins.
-  - **Lâmina 03:** Dados + instrução + revisão. Visual de poucos elementos, grid de respiro, título em Funnel Display e corpo em Poppins.
-  - **Lâmina 04:** Três usos na gestão. Visual de poucos elementos, grid de respiro, título em Funnel Display e corpo em Poppins.
-  - **Lâmina 05:** O que nunca delegar sem validação. Visual de poucos elementos, grid de respiro, título em Funnel Display e corpo em Poppins.
+Estas são as informações que encontrei:
 
-## TÍTULO, CAPA E DESCRIÇÃO
+1. Mensagem da coordenação: precisamos revisar o treinamento de prevenção de quedas.
+2. Anotação de reunião: organizar capacitação sobre identificação correta do paciente para novos colaboradores.
+3. Arquivo na pasta do Drive: apresentação antiga sobre higienização das mãos, que precisa ser revisada.
+4. E-mail recebido: solicitação de atualização sobre registros de enfermagem, sem prazo definido.
+5. Planilha de planejamento: há uma demanda por capacitação em acolhimento e comunicação, ainda sem turma definida.
+6. Ata de reunião: alinhar com o Núcleo de Segurança do Paciente quais temas devem receber atenção no próximo mês.
 
-**Título base:** IA do zero: o que é e como pode ajudar na saúde? | Estrateg[IA]  
-**Thumbnail:** título curto (até 5 palavras) + elemento visual de processo/resultado; foto da professora somente se agregar clareza.  
-**Descrição curta:** Aprenda entender o que a inteligência artificial faz, diferenciar geração de texto de tomada de decisão e reconhecer aplicações úteis na gestão. Aula prática de IA do zero para profissionais e gestores da saúde, com demonstração fictícia e revisão responsável.
+Quero que você:
 
-**Links para incluir no YouTube:**
-- Glossário: https://rosakethllyn-blip.github.io/modo-ia-saude-glossario/
-- Site: https://rosakethllyn-blip.github.io/estrateg-ia-site/project/Estrateg%5BIA%5D.dc.html
-- Material desta aula: `../materiais/mapa-primeiros-usos.md` (disponibilizar URL pública após publicar).
+A. Organize tudo em um quadro com tema, origem da informação, entrega sugerida, informação que falta e próximo passo.
+B. Sugira uma estrutura de pastas digitais para guardar esses materiais de maneira organizada, com nomes simples e padronizados.
+C. Indique quais informações preciso levantar antes de definir as prioridades, os responsáveis e as datas.
+D. Sugira critérios que eu poderia usar para discutir prioridades com a equipe, sem estabelecer uma ordem definitiva.
+E. Separe claramente o que foi informado por mim do que é uma sugestão sua.
 
-## CHECKLIST DE GRAVAÇÃO
+Use linguagem clara, própria da gestão em saúde. Não crie indicadores, prazos, nomes de profissionais ou decisões que eu não forneci.
+```
 
-- [ ] Confirmar o nome, a interface, o preço e as funções atuais da ferramenta demonstrada.
-- [ ] Conferir dados, conceitos técnicos e eventuais fontes primárias.
-- [ ] Preparar todas as telas e arquivos fictícios antes da gravação.
-- [ ] Gravar câmera, áudio e tela em trilhas separadas quando possível.
-- [ ] Rever o vídeo completo e garantir que nenhum dado sensível aparece.
-- [ ] Capturar a miniatura e produzir os slides no Design System.
-- [ ] Conferir links, descrição, legendas e capítulos do YouTube.
+## PROMPT 02 — PEDIDO DE REVISÃO
+
+```text
+Revise a resposta anterior como se estivesse preparando esse material para uma reunião de gestão.
+1. Mostre o que veio diretamente das minhas informações e o que é hipótese ou sugestão sua.
+2. Confira se você inventou algum prazo, responsável, indicador ou prioridade. Se inventou, remova e marque "A definir".
+3. Destaque até cinco perguntas que eu preciso levar para a equipe antes de aprovar qualquer plano.
+4. Entregue uma proposta enxuta de estrutura de pastas digitais. Não afirme que as pastas foram criadas.
+```
+
+## ROTEIRO DE CAPTURA DE TELA
+
+1. Abrir uma nova conversa no ChatGPT ou Claude em uma conta autorizada, sem notificações ou documentos privados na tela.
+2. Avisar que todos os seis exemplos são fictícios e foram colocados manualmente no texto. Não afirmar que a ferramenta leu arquivos do Drive ou mensagens.
+3. Colar o **Prompt 01**. Antes de enviar, percorrer os blocos contexto, seis informações e pedidos A–E.
+4. Enviar e observar a saída real; destacar as colunas, estrutura de pastas sugerida e lacunas. Se vier diferente do previsto, comentar naturalmente o que precisa ajustar.
+5. Colar o **Prompt 02**. Mostrar a comparação e os itens marcados como “A definir”.
+6. Concluir na câmera: a IA ajuda a estruturar o trabalho, mas não autoriza nem prioriza o plano da instituição.
+
+## SLIDES — ALINHAMENTO DE CONTEÚDO (DESIGN SYSTEM ESTRATEG[IA])
+
+- **Slide 1:** Título da aula, identidade Estrateg[IA].
+- **Slide 2:** Cena de anotações, Drive, e-mails e mensagens reunidos num quadro do NEP.
+- **Slide 3:** “A IA não entra sozinha nas suas pastas”: demonstrar a diferença entre informações coladas/anexadas e integração configurada.
+- **Slide 4:** Antes: seis demandas dispersas. Depois: quadro com o que falta validar.
+- **Slide 5:** Abrir a ferramenta e colar o prompt. Evitar excesso de texto na lâmina.
+- **Slide 6:** Exibir estrutura de resposta esperada, não um resultado fictício atribuído ao ChatGPT.
+- **Slide 7:** “Informação ≠ prioridade aprovada”. Fluxo: contexto → proposta → conferência → decisão humana.
+- **Slide 8:** Exercício: 3 tarefas → 1 exemplo fictício → 2 prompts → revisão.
+
+**Tipografia:** Funnel Display para títulos, Poppins para corpo.  
+**Cores:** #F23C00, #1A1A1B, branco e cinzas do Design System.
+
+## CHECKLIST DE REVISÃO
+
+- [ ] Confirmar a grafia do nome da professora antes de colocar créditos.
+- [ ] Ensaiar a passagem da cena-problema para a abertura do ChatGPT.
+- [ ] Copiar ambos os prompts do roteiro e testar em uma conversa nova.
+- [ ] Verificar se a narração corresponde à resposta produzida na gravação.
+- [ ] Não apresentar sugestões geradas como prazos ou prioridades aprovadas.
+- [ ] Não usar informações pessoais ou institucionais sigilosas sem avaliação e autorização.
+- [ ] Revisar os slides após a captura real, incluindo capturas autorizadas quando fizer sentido.
+
+**Referências de funcionalidades (consulta antes da gravação):**  
+ChatGPT: https://help.openai.com/pt-br/articles/8555545-uploading-files-and-audio-to-chatgpt  
+Claude: https://support.claude.com/pt/articles/8241126-carregar-arquivos-para-claude
+
+**Glossário:** https://rosakethllyn-blip.github.io/modo-ia-saude-glossario/  
+**Estrateg[IA]:** https://rosakethllyn-blip.github.io/estrateg-ia-site/project/Estrateg%5BIA%5D.dc.html
