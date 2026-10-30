@@ -29,6 +29,14 @@ O Design System do site original foi mantido. O curso agora é dedicado principa
 
 **Instalação preferida:** Claude Desktop com aba Code. Terminal/PowerShell/IDE são alternativas, não pré-requisitos desta aula. Confira o procedimento vigente em https://support.claude.com/pt/articles/14552382-seu-primeiro-dia-no-claude-code .
 
+## Prévia de roteiros e PDF
+
+Os 10 botões **Roteiro** abrem uma leitura completa em modal com **Baixar PDF**. Os PDFs reais estão versionados em `roteiros/pdf/`; a leitura HTML em `roteiros/preview/` usa a mesma fonte editorial. Sem JavaScript, o link abre diretamente o PDF. Não há geração de PDF no navegador nem dependência de serviço externo para baixar.
+
+Para atualizar os materiais depois de editar um roteiro: instalar `reportlab markdown pypdf` e executar `python scripts/build_roteiros.py` (Windows, fontes Arial de `C:/Windows/Fonts`). Revisar e versionar ambos os diretórios gerados. O gerador preserva o texto e o título do roteiro de origem, inclusive quando este ainda difere da nova grade editorial.
+
+Verificação de interface: com Playwright instalado, Chrome e o site servido em `http://localhost:8765`, executar `node scripts/test-modal.cjs`. Verifica os 10 episódios, PDFs, ESC, foco, Tab, clique no fundo e largura mobile.
+
 ## Estado dos materiais
 
 Os 10 cards na página representam a **nova grade**; todos os roteiros, apresentações e teleprompters precisam estar alinhados ao conteúdo desta grade e revisados antes de cada gravação. Os episódios 11 e 12 antigos foram removidos da programação visível, mas seus históricos podem permanecer no repositório.

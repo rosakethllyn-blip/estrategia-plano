@@ -1,0 +1,23 @@
+.script-dialog { width: min(900px, calc(100% - 32px)); max-height: 90dvh; padding: 0; border: 1px solid var(--border-default); border-radius: 24px; color: var(--text-primary); background: var(--bg-surface); box-shadow: 0 30px 100px #0005; }
+.script-dialog::backdrop { background: #160d08a8; backdrop-filter: blur(6px); }
+.script-dialog[open] { display: flex; flex-direction: column; }
+.script-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 20px 24px; border-bottom: 1px solid var(--divider); }
+.script-toolbar h2 { flex: 1; margin: 0; font-size: 20px; }
+.script-download, .script-close { min-height: 44px; border-radius: 12px; padding: 10px 16px; cursor: pointer; font: inherit; font-size: 13px; font-weight: 600; }
+.script-download { background: var(--brand-500); color: white; text-decoration: none; display: inline-flex; align-items: center; }
+.script-close { border: 1px solid var(--border-default); background: var(--bg-surface-alt); color: var(--text-primary); }
+.script-content { overflow-y: auto; overscroll-behavior: contain; padding: clamp(20px, 5vw, 48px); line-height: 1.85; font-size: 15px; overflow-wrap: anywhere; }
+.script-content h1 { font-size: clamp(24px, 4vw, 34px); line-height: 1.3; margin: 0 0 30px; }
+.script-content h2 { font-size: 19px; line-height: 1.5; color: var(--brand-500); margin: 36px 0 18px; }
+.script-content blockquote { margin: 20px 0; padding: 4px 22px; border-left: 3px solid var(--brand-500); background: var(--bg-surface-alt); border-radius: 0 12px 12px 0; }
+.script-content pre { white-space: pre-wrap; background: var(--bg-surface-alt); border-radius: 12px; padding: 16px; }
+.script-content table { border-collapse: collapse; width: 100%; font-size: 12px; }
+.script-content th, .script-content td { border: 1px solid var(--border-default); padding: 8px; vertical-align: top; }
+.script-content a { color: var(--brand-500); }
+.script-dialog :focus-visible, [data-roteiro]:focus-visible { outline: 3px solid var(--brand-500); outline-offset: 4px; }
+/* Account for track padding and allow the original cards to fit narrow screens. */
+.roteiros-track { box-sizing: border-box; }
+.roteiros-track > .roteiro-card { min-width: 0; box-sizing: border-box; flex-basis: calc((100% - 20px) / 3); }
+@media (max-width: 900px) { .roteiros-track > .roteiro-card { flex-basis: calc((100% - 10px) / 2); } }
+@media (max-width: 600px) { .roteiros-track > .roteiro-card { flex-basis: 100%; padding: 24px 18px; } .script-dialog { width: calc(100% - 16px); max-height: 94dvh; border-radius: 18px; } .script-toolbar { padding: 16px; gap: 8px; } .script-toolbar h2 { flex-basis: 100%; } .script-content { font-size: 14px; } }
+@media (prefers-reduced-motion: reduce) { .roteiros-track { transition: none; } }
